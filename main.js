@@ -20,7 +20,7 @@ var ytPlayerReady = false;
 var tempbgPaused;
 var tempThumbs='';
 var tempActive='';
-var firstPage = true;
+var firstPage = false;
 var mobileDevice = false;
 var menuMobileOpened = true;
 

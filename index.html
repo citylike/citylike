@@ -4,18 +4,17 @@
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>PhotoDrugs | Background Video/Image/Audio Supported Premium HTML5 Theme</title>
+<title>PhotoDrugs | Project Masonary</title>
 <meta name="description" content="PhotoDrugs Background Video/Image/Audio Supported Premium HTML5 Theme" />
 <meta name='robots' content='index,follow' />
 <link rel='stylesheet' id='contentFont-css'  href='http://fonts.googleapis.com/css?family=PT+Sans:&#038;subset=latin,cyrillic,latin-ext,cyrillic-ext' type='text/css' media='all' />
 <link rel='stylesheet' id='headerFont-css'  href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:&#038;subset=latin,cyrillic,latin-ext,cyrillic-ext' type='text/css' media='all' />
 <link rel='stylesheet' id='bootstrap-css-css'  href='css/bootstrap.css' type='text/css' media='all' />
-<link rel='stylesheet' id='font-awesome-css'  href='css/font-awesome.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='css/fontello/css/fontello.css' type='text/css' media='all' />
 <link rel='stylesheet' id='flexslider-css-css'  href='css/flexslider.css' type='text/css' media='all' />
 <link rel='stylesheet' id='videojs-css-css'  href='css/video-js.css' type='text/css' media='all' />
 <link rel='stylesheet' id='ThemeKeyAnimations-css'  href='css/animations.css' type='text/css' media='all' />
 <link rel='stylesheet' id='ThemeStyle'  href='style.less' type='text/less' media='all' />
-<link rel='stylesheet' id='democss-css'  href='css/demo.css' type='text/css' media='all' />
 <!-- <link rel='stylesheet' id='generalStyle-css'  href='style.css' type='text/css' media='all' /> -->
 <script type='text/javascript' src='js/jquery-1.11.0.min.js'></script>
 <script type='text/javascript' src='js/jquery-migrate-1.2.1.min.js'></script>
@@ -27,7 +26,7 @@
 var historyApiEnable = true; // if true htlm5 history api will use
 var bgTime = 6000; // Background Image/Video animation display duration (ms)
 var bgPaused = false; // Background Image/Video animation paused
-var autoPlay = true; // Background audio autoplay
+var autoPlay = false; // Background audio autoplay
 var loop = false; // Background audio loop or next song
 var videoSkipMobile = false; // if true background videos skips on mobile
 var NormalFade = false; // Normal fade or animated bg image
@@ -36,11 +35,11 @@ var muteWhilePlayVideo = true; // if true video mute while playing video
 var btnSoundUrlMp3 = 'http://files.renklibeyaz.com/sounds/pd-button.mp3'; // Button Hover Sound
 var btnSoundUrlOgg = 'http://files.renklibeyaz.com/sounds/pd-button.ogg'; // Button Hover Sound
 var videoMuted = false; // if true video start mute
-var loopBg = true; // if true backgroud item loop when end of the array
+var loopBg = false; // if true backgroud item loop when end of the array
 var bgPatternV = 'block'; // if block pattern visible, if none pattern hide
 var videoPaused = false; // if true video doesn't start
-var bgStretch = true; // if true bg stretch
-var twitterEnable = true; // if true twitter data loaded by ajax
+var bgStretch = false; // if true bg stretch
+var twitterEnable = false; // if true twitter data loaded by ajax
 </script>
 </head>
 <body>
@@ -50,7 +49,6 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 
 	<!-- BEGIN: Main Menu -->
 	<header id="menu-container">
-		<a id="closeMenu" class="nolink" href="javascript:void(0);"></a>
 		<div id="menu-wrapper">
 			<span id="menuBorder"></span>
 			<!-- BEGIN: Logo -->
@@ -72,7 +70,7 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 						</li>
 						
 						<li id="menu-item-2">						
-							<a href="index.html#">
+							<a href="projects-masonary.html#">
 								<span class="title">
 									<span class="front">ABOUT</span>
 									<span class="back">ABOUT</span>
@@ -118,7 +116,7 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 								</li>
 								
 								<li id="menu-item-25">							
-									<a href="index.html#">
+									<a href="projects-masonary.html#">
 										<span class="title">
 											<span class="front">LEVEL 3</span>
 											<span class="back">LEVEL 3</span>
@@ -127,7 +125,7 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 										<ul class="sub-menu">
 
 										<li id="menu-item-251">								
-											<a href="index.html#">
+											<a href="projects-masonary.html#">
 												<span class="title">
 													<span class="front">ITEM 1</span>
 													<span class="back">ITEM 1</span>
@@ -136,7 +134,7 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 										</li>
 
 										<li id="menu-item-252">								
-											<a href="index.html#">
+											<a href="projects-masonary.html#">
 												<span class="title">
 													<span class="front">ITEM 2</span>
 													<span class="back">ITEM 2</span>
@@ -145,7 +143,7 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 										</li>
 
 										<li id="menu-item-253">								
-											<a href="index.html#">
+											<a href="projects-masonary.html#">
 												<span class="title">
 													<span class="front">ITEM 3</span>
 													<span class="back">ITEM 3</span>
@@ -167,7 +165,7 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 						</li>
 
 						<li id="menu-item-4">						
-							<a href="index.html#">
+							<a href="projects-masonary.html#">
 								<span class="title">
 									<span class="front">GALLERIES</span>
 									<span class="back">GALLERIES</span>
@@ -206,7 +204,7 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 						</li>
 
 						<li id="menu-item-5">						
-							<a href="index.html#">
+							<a href="projects-masonary.html#">
 								<span class="title">
 									<span class="front">PROJECTS</span>
 									<span class="back">PROJECTS</span>
@@ -264,7 +262,7 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 						</li>
 
 						<li id="menu-item-6">						
-							<a href="index.html#">
+							<a href="projects-masonary.html#">
 								<span class="title">
 									<span class="front">PORTFOLIOS</span>
 									<span class="back">PORTFOLIOS</span>
@@ -331,78 +329,269 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 					</ul>
 				</div>
 			</nav>
-				
-			<div id="TwitterFeed">
-				<h3>Twitter Feed</h3>
-				<ul>
-					<li>Tweets are loading</li>
-				</ul>
-			</div>
-			<h3 class="menulink"><a href="index.html#">Buy This Theme!</a></h3>
-			<div id="menuSocial">
-				<a class="facebook" href="index.html#"></a>
-				<a class="twitter" href="index.html#"></a>
-				<a class="dribbble" href="index.html#"></a>
-				<a class="linkedin" href="index.html#"></a>
-				<a class="youtube" href="index.html#"></a>
-				<a class="vimeo" href="index.html#"></a>
-				<a class="pinterest" href="index.html#"></a>
-				<a class="instagram" href="index.html#"></a>
-			</div>
 		</div>
 	</header>
-	<a id="openMenu" class="nolink" href="index.html#"></a>
+	<a id="openMenu" class="nolink" href="projects-masonary.html#"></a>
 	<!-- END: Main Menu -->
 	
-	<!-- BEGIN: Main Elements; Please don't change these elements -->
-	<div id="bgPlayer">
-		<div id="mediaWrapper"></div>
-		<div id="bgPattern"></div>
-		<div id="mediaTimer"></div>
-		<div id="bgText">
-			<div class="headerTextWrapper"><div class="headerText"></div></div>
-			<div class="clearfix"></div>
-			<div class="subTextWrapper"><div class="subText"></div></div>
-		</div>
-		<!-- BEGIN: Controller Buttons -->
-		<a class="prevBG" href="javascript:void(0);"></a>
-		<a class="nextBG" href="javascript:void(0);"></a>
-		<div class="itemNumbers">
-			<span class="currentItemNo"></span> <span class="currentItemSeperator">/</span> <span class="totalItemCount"></span>
-			<a href="index.html#" class="currentPlayPause"></a>
-		</div>
-		<div class="screenControl">
-			<a class="fitBG" href="javascript:void(0);"></a>
-			<a class="fitCenterBG" href="javascript:void(0);"></a>
-			<a class="fullCenterBG" href="javascript:void(0);"></a>
-			<a class="bgTextToggle" href="javascript:void(0);"></a>
-		</div>
-		<div class="bgImageLoading">
-			<div id="circleG">
-				<div id="circleG_1" class="circleG"></div>
-				<div id="circleG_2" class="circleG"></div>
-				<div id="circleG_3" class="circleG"></div>
-			</div>
-		</div>
-		<!-- END: Controller Buttons -->
-		
-		<div id="contentLoading">
-			<div id="loading-text">Loading</div>
-			<div class="slider">
-			<div class="line"></div>
-			  <div class="break dot1"></div>
-			  <div class="break dot2"></div>
-			  <div class="break dot3"></div>
-			</div>
-		</div>	
-		
-		<div id="videoExpander"></div>
-	</div>
-	
 	<div id="content">
-		<div id="contentContainer" class="Visible Left">
+		<div id="contentContainer" class="Invisible Centered">
 			<div id="contentBox">
 				<section id="contentBoxContainer">
+					<!-- Content Start Here -->
+					<div class="project-filter-menu-holder">
+						<ul class="project-filter project-filter-menu">
+							<li><a href="projects-masonary.html#" class="nolink selected" data-filter="*">All</a></li>
+							<li><a  href="projects-masonary.html#" class="nolink" data-filter=".cat13" >Css</a></li>
+							<li><a  href="projects-masonary.html#" class="nolink" data-filter=".cat15" >Wordpress</a></li>
+							<li><a  href="projects-masonary.html#" class="nolink" data-filter=".cat12" >Php</a></li>
+							<li><a  href="projects-masonary.html#" class="nolink" data-filter=".cat14" >Html</a></li>
+						</ul>
+					</div>
+					<div class="isotope-project" data-col-count="3" data-style="masonry">
+												<!-- .project-item -->
+						<div class="project-item project-item-3Cols cat13 ">
+							<div class="project-item-container hoverable" data-mouseover="projectItemMoverAni" data-mouseout="projectItemMoutAni">
+								<a href="project-page.html" >
+									<img src="images/squareform/13.jpg" alt="Non habitant tristique cras, placerat mauris." >
+									<div class="hoverWrapperBg"></div>
+									<div class="hoverWrapper">
+										<span class="hoverIconChain hoverable clickable" data-link="project-page.html" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectChain" data-transout="transoutProjectChain"></span>
+										<span class="hoverIconHeart hoverable" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectHeart" data-transout="transoutProjectHeart" data-post-id="106"></span>
+									</div>
+								</a>
+								<div class="project-item-footer">			
+									<span class="project-like ">24</span>			
+									<span class="project-header">Non habitant tristique cras, placerat mauris.				
+										<span class="project-categories">Css</span>			
+									</span>		
+								</div>
+							</div>
+							<!-- .project-item-container -->
+						</div>
+																		<!-- .project-item -->
+						<div class="project-item project-item-3Cols cat13 ">
+							<div class="project-item-container hoverable" data-mouseover="projectItemMoverAni" data-mouseout="projectItemMoutAni">
+								<a href="project-page.html" >
+									<img src="images/squareform/1.jpg" alt="Non habitant tristique cras, placerat mauris." >
+									<div class="hoverWrapperBg"></div>
+									<div class="hoverWrapper">
+										<span class="hoverIconChain hoverable clickable" data-link="project-page.html" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectChain" data-transout="transoutProjectChain"></span>
+										<span class="hoverIconHeart hoverable" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectHeart" data-transout="transoutProjectHeart" data-post-id="106"></span>
+									</div>
+								</a>
+								<div class="project-item-footer">			
+									<span class="project-like ">24</span>			
+									<span class="project-header">Non habitant tristique cras, placerat mauris.				
+										<span class="project-categories">Css</span>			
+									</span>		
+								</div>
+							</div>
+							<!-- .project-item-container -->
+						</div>
+																		<!-- .project-item -->
+						<div class="project-item project-item-3Cols cat13 ">
+							<div class="project-item-container hoverable" data-mouseover="projectItemMoverAni" data-mouseout="projectItemMoutAni">
+								<a href="project-page.html" >
+									<img src="images/squareform/3.jpg" alt="Non habitant tristique cras, placerat mauris." >
+									<div class="hoverWrapperBg"></div>
+									<div class="hoverWrapper">
+										<span class="hoverIconChain hoverable clickable" data-link="project-page.html" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectChain" data-transout="transoutProjectChain"></span>
+										<span class="hoverIconHeart hoverable" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectHeart" data-transout="transoutProjectHeart" data-post-id="106"></span>
+									</div>
+								</a>
+								<div class="project-item-footer">			
+									<span class="project-like ">24</span>			
+									<span class="project-header">Non habitant tristique cras, placerat mauris.				
+										<span class="project-categories">Css</span>			
+									</span>		
+								</div>
+							</div>
+							<!-- .project-item-container -->
+						</div>
+																		<!-- .project-item -->
+						<div class="project-item project-item-3Cols cat13 ">
+							<div class="project-item-container hoverable" data-mouseover="projectItemMoverAni" data-mouseout="projectItemMoutAni">
+								<a href="project-page.html" >
+									<img src="images/squareform/4.jpg" alt="Non habitant tristique cras, placerat mauris." >
+									<div class="hoverWrapperBg"></div>
+									<div class="hoverWrapper">
+										<span class="hoverIconChain hoverable clickable" data-link="project-page.html" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectChain" data-transout="transoutProjectChain"></span>
+										<span class="hoverIconHeart hoverable" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectHeart" data-transout="transoutProjectHeart" data-post-id="106"></span>
+									</div>
+								</a>
+								<div class="project-item-footer">			
+									<span class="project-like ">24</span>			
+									<span class="project-header">Non habitant tristique cras, placerat mauris.				
+										<span class="project-categories">Css</span>			
+									</span>		
+								</div>
+							</div>
+							<!-- .project-item-container -->
+						</div>
+																		<!-- .project-item -->
+						<div class="project-item project-item-3Cols cat14 ">
+							<div class="project-item-container hoverable" data-mouseover="projectItemMoverAni" data-mouseout="projectItemMoutAni">
+								<a href="project-page.html" >
+									<img src="images/squareform/5.jpg" alt="Non habitant tristique cras, placerat mauris." >
+									<div class="hoverWrapperBg"></div>
+									<div class="hoverWrapper">
+										<span class="hoverIconChain hoverable clickable" data-link="project-page.html" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectChain" data-transout="transoutProjectChain"></span>
+										<span class="hoverIconHeart hoverable" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectHeart" data-transout="transoutProjectHeart" data-post-id="106"></span>
+									</div>
+								</a>
+								<div class="project-item-footer">			
+									<span class="project-like ">24</span>			
+									<span class="project-header">Non habitant tristique cras, placerat mauris.				
+										<span class="project-categories">Css</span>			
+									</span>		
+								</div>
+							</div>
+							<!-- .project-item-container -->
+						</div>
+																		<!-- .project-item -->
+						<div class="project-item project-item-3Cols cat14 ">
+							<div class="project-item-container hoverable" data-mouseover="projectItemMoverAni" data-mouseout="projectItemMoutAni">
+								<a href="project-page.html" >
+									<img src="images/squareform/6.jpg" alt="Non habitant tristique cras, placerat mauris." >
+									<div class="hoverWrapperBg"></div>
+									<div class="hoverWrapper">
+										<span class="hoverIconChain hoverable clickable" data-link="project-page.html" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectChain" data-transout="transoutProjectChain"></span>
+										<span class="hoverIconHeart hoverable" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectHeart" data-transout="transoutProjectHeart" data-post-id="106"></span>
+									</div>
+								</a>
+								<div class="project-item-footer">			
+									<span class="project-like ">24</span>			
+									<span class="project-header">Non habitant tristique cras, placerat mauris.				
+										<span class="project-categories">Css</span>			
+									</span>		
+								</div>
+							</div>
+							<!-- .project-item-container -->
+						</div>
+																		<!-- .project-item -->
+						<div class="project-item project-item-3Cols cat14 ">
+							<div class="project-item-container hoverable" data-mouseover="projectItemMoverAni" data-mouseout="projectItemMoutAni">
+								<a href="project-page.html" >
+									<img src="images/squareform/7.jpg" alt="Non habitant tristique cras, placerat mauris." >
+									<div class="hoverWrapperBg"></div>
+									<div class="hoverWrapper">
+										<span class="hoverIconChain hoverable clickable" data-link="project-page.html" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectChain" data-transout="transoutProjectChain"></span>
+										<span class="hoverIconHeart hoverable" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectHeart" data-transout="transoutProjectHeart" data-post-id="106"></span>
+									</div>
+								</a>
+								<div class="project-item-footer">			
+									<span class="project-like ">24</span>			
+									<span class="project-header">Non habitant tristique cras, placerat mauris.				
+										<span class="project-categories">Css</span>			
+									</span>		
+								</div>
+							</div>
+							<!-- .project-item-container -->
+						</div>
+																		<!-- .project-item -->
+						<div class="project-item project-item-3Cols cat12 ">
+							<div class="project-item-container hoverable" data-mouseover="projectItemMoverAni" data-mouseout="projectItemMoutAni">
+								<a href="project-page.html" >
+									<img src="images/squareform/8.jpg" alt="Non habitant tristique cras, placerat mauris." >
+									<div class="hoverWrapperBg"></div>
+									<div class="hoverWrapper">
+										<span class="hoverIconChain hoverable clickable" data-link="project-page.html" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectChain" data-transout="transoutProjectChain"></span>
+										<span class="hoverIconHeart hoverable" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectHeart" data-transout="transoutProjectHeart" data-post-id="106"></span>
+									</div>
+								</a>
+								<div class="project-item-footer">			
+									<span class="project-like ">24</span>			
+									<span class="project-header">Non habitant tristique cras, placerat mauris.				
+										<span class="project-categories">Css</span>			
+									</span>		
+								</div>
+							</div>
+							<!-- .project-item-container -->
+						</div>
+																		<!-- .project-item -->
+						<div class="project-item project-item-3Cols cat12 ">
+							<div class="project-item-container hoverable" data-mouseover="projectItemMoverAni" data-mouseout="projectItemMoutAni">
+								<a href="project-page.html" >
+									<img src="images/squareform/9.jpg" alt="Non habitant tristique cras, placerat mauris." >
+									<div class="hoverWrapperBg"></div>
+									<div class="hoverWrapper">
+										<span class="hoverIconChain hoverable clickable" data-link="project-page.html" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectChain" data-transout="transoutProjectChain"></span>
+										<span class="hoverIconHeart hoverable" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectHeart" data-transout="transoutProjectHeart" data-post-id="106"></span>
+									</div>
+								</a>
+								<div class="project-item-footer">			
+									<span class="project-like ">24</span>			
+									<span class="project-header">Non habitant tristique cras, placerat mauris.				
+										<span class="project-categories">Css</span>			
+									</span>		
+								</div>
+							</div>
+							<!-- .project-item-container -->
+						</div>
+																		<!-- .project-item -->
+						<div class="project-item project-item-3Cols cat12 ">
+							<div class="project-item-container hoverable" data-mouseover="projectItemMoverAni" data-mouseout="projectItemMoutAni">
+								<a href="project-page.html" >
+									<img src="images/squareform/10.jpg" alt="Non habitant tristique cras, placerat mauris." >
+									<div class="hoverWrapperBg"></div>
+									<div class="hoverWrapper">
+										<span class="hoverIconChain hoverable clickable" data-link="project-page.html" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectChain" data-transout="transoutProjectChain"></span>
+										<span class="hoverIconHeart hoverable" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectHeart" data-transout="transoutProjectHeart" data-post-id="106"></span>
+									</div>
+								</a>
+								<div class="project-item-footer">			
+									<span class="project-like ">24</span>			
+									<span class="project-header">Non habitant tristique cras, placerat mauris.				
+										<span class="project-categories">Css</span>			
+									</span>		
+								</div>
+							</div>
+							<!-- .project-item-container -->
+						</div>
+																		<!-- .project-item -->
+						<div class="project-item project-item-3Cols cat13 ">
+							<div class="project-item-container hoverable" data-mouseover="projectItemMoverAni" data-mouseout="projectItemMoutAni">
+								<a href="project-page.html" >
+									<img src="images/squareform/11.jpg" alt="Non habitant tristique cras, placerat mauris." >
+									<div class="hoverWrapperBg"></div>
+									<div class="hoverWrapper">
+										<span class="hoverIconChain hoverable clickable" data-link="project-page.html" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectChain" data-transout="transoutProjectChain"></span>
+										<span class="hoverIconHeart hoverable" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectHeart" data-transout="transoutProjectHeart" data-post-id="106"></span>
+									</div>
+								</a>
+								<div class="project-item-footer">			
+									<span class="project-like ">24</span>			
+									<span class="project-header">Non habitant tristique cras, placerat mauris.				
+										<span class="project-categories">Css</span>			
+									</span>		
+								</div>
+							</div>
+							<!-- .project-item-container -->
+						</div>
+																		<!-- .project-item -->
+						<div class="project-item project-item-3Cols cat13 ">
+							<div class="project-item-container hoverable" data-mouseover="projectItemMoverAni" data-mouseout="projectItemMoutAni">
+								<a href="project-page.html" >
+									<img src="images/squareform/12.jpg" alt="Non habitant tristique cras, placerat mauris." >
+									<div class="hoverWrapperBg"></div>
+									<div class="hoverWrapper">
+										<span class="hoverIconChain hoverable clickable" data-link="project-page.html" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectChain" data-transout="transoutProjectChain"></span>
+										<span class="hoverIconHeart hoverable" data-mouseover="moverIconAniHeart" data-mouseout="moutIconAniHeart" data-transin="transinProjectHeart" data-transout="transoutProjectHeart" data-post-id="106"></span>
+									</div>
+								</a>
+								<div class="project-item-footer">			
+									<span class="project-like ">24</span>			
+									<span class="project-header">Non habitant tristique cras, placerat mauris.				
+										<span class="project-categories">Css</span>			
+									</span>		
+								</div>
+							</div>
+							<!-- .project-item-container -->
+						</div>
+					</div>
+					<!-- .isotope-project -->
+					<!-- Content End Here -->
 				</section>
 			</div>
 		</div>
@@ -411,85 +600,7 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 	
 	<!-- BEGIN: Bottom Side Bar -->
 	<div id="bgImagesContainer">
-		<ul id="bgImages" data-gallery-id="1">
-			<li>
-				<a href="images/gallery-02-17.jpg" title="Mutiple Background Gallery" >
-					<img class="thumb" src="images/-795516104.jpg" alt="Mutiple Background Gallery" >
-				</a>
-				<h3>Mutiple Background Gallery</h3>
-				<p>You Can Use Different Images and Videos in Background Gallery for Each Pages</p>
-			</li>
-			<li>
-				<a href="http://vimeo.com/31066005?width=500&amp;height=281" >
-					<img class="thumb" src="images/-105614321.jpg" alt="Background Video Support" >
-				</a>
-				<h3>Background Video Support</h3>
-				<p>Youtube, Vimeo and HTML5 Video Player for Self Hosted Videos</p>
-			</li>
-			<li>
-				<a href="images/gallery-02-02.jpg" title="Flexible Menu Bar and Content" >
-					<img class="thumb" src="images/-1894876897.jpg" alt="Flexible Menu Bar and Content" >
-				</a>
-				<h3>Flexible Menu Bar and Content</h3>
-				<p>Hoverable and Dragable Menu Bar</p>
-			</li>
-			<li>
-				<a href="images/blog-03.jpg" title="Fully Responsive for Mobile Devices" >
-					<img class="thumb" src="images/-321340950.jpg" alt="Fully Responsive for Mobile Devices" >
-				</a>
-				<h3>Fully Responsive for Mobile Devices</h3>
-				<p>You Can Drag Menu, Gallery Thumbs, Even You Can Pinch in, Pinch out or Swipe in Gallery.</p>
-			</li>
-			<li>
-				<a href="images/gallery-02-05.jpg" title="No More Modal Window" >
-					<img class="thumb" src="images/-2050265082.jpg" alt="No More Modal Window" >
-				</a>
-				<h3>No More Modal Window</h3>
-				<p>You Can Surf Amongst The Virtual Content</p>
-			</li>
-			<li>
-				<a href="images/gallery-02-10.jpg" title="Audio Support" >
-					<img class="thumb" src="images/-632264159.jpg" alt="Audio Support" >
-				</a>
-				<h3>Audio Support</h3>
-				<p>HTML5 Audio Support with Advanced Playlist</p>
-			</li>
-			<li>
-				<a href="images/gallery-02-18.jpg" title="Flexible Page Width, Position and Background" >
-					<img class="thumb" src="images/162886036.jpg" alt="Flexible Page Width, Position and Background" >
-				</a>
-				<h3>Flexible Page Width, Position and Background</h3>
-				<p>You Can Use a Page on Left, on Right or Centered. And a Page Can be Fullpage or Fixed with Visible or Invisible Background. </p>
-			</li>
-			<li>
-				<a href="images/gallery-02-03.jpg" title="Grid Gallery and Portfolio" >
-					<img class="thumb" src="images/1134852481.jpg" alt="Grid Gallery and Portfolio" >
-				</a>
-				<h3>Grid Gallery and Portfolio</h3>
-				<p>Perfect Mansonary Images and Filterable Portfolio</p>
-			</li>
-			<li>
-				<a href="images/gallery-02-20.jpg" title="Masonary Blog with 8 Post Formats" >
-					<img class="thumb" src="images/-472033564.jpg" alt="Masonary Blog with 8 Post Formats" >
-				</a>
-				<h3>Masonary Blog with 8 Post Formats</h3>
-				<p>with Load More Feature</p>
-			</li>
-			<li>
-				<a href="images/gallery-02-19.jpg" title="Masonary Projects" >
-					<img class="thumb" src="images/-987795190.jpg" alt="Masonary Projects" >
-				</a>
-				<h3>Masonary Projects</h3>
-				<p>You Can Use Masonary or Fixed Row with Filter of Pagination </p>
-			</li>
-			<li>
-				<a href="images/project-22.jpg" title="Twitter Widget" >
-					<img class="thumb" src="images/-43884327.jpg" alt="Twitter Widget" >
-				</a>
-				<h3>Twitter Widget</h3>
-				<p>Includes Php Codes For Twitter</p>
-			</li>
-		</ul>		
+		<ul id="bgImages" data-gallery-id="0"></ul>		
 	</div>
 	<!-- END: Bottom Side Bar -->
 	
@@ -497,28 +608,6 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 		<div id="footerLeft" class="footerText">
 						<span>PhotoDrugs Premium Theme</span>
 				</div>
-		<div id="footerRight">
-			<div class="footerBgVideoControls">
-				<a href="index.html#" class="footerBtn pauseVideo" data-toggle="tooltipfooter" title="Pause Video"></a> 
-				<a href="index.html#" class="footerBtn playVideo" data-toggle="tooltipfooter" title="Play Video"></a>
-				
-				<a href="index.html#" class="footerBtn muteVideo" data-toggle="tooltipfooter" title="Mute Video"></a> 
-				<a href="index.html#" class="footerBtn unmuteVideo" data-toggle="tooltipfooter" title="Unmute Video"></a>
-			</div>
-			<div class="footerBgControls">
-				<a href="index.html#" class="footerBtn fullpageGallery" data-toggle="tooltipfooter" title="FullPage Gallery" onclick="setFull()"></a> 
-				<a href="index.html#" class="footerBtn pauseGallery" data-toggle="tooltipfooter" title="Pause Gallery"></a> 
-				<a href="index.html#" class="footerBtn playGallery" data-toggle="tooltipfooter" title="Play Gallery"></a> 
-			</div>
-			<div class="footerAudioControls">
-				<a href="index.html#" class="footerBtn prevAudio" data-toggle="tooltipfooter" title="Prev Song"></a> 
-				<a href="index.html#" class="footerBtn stopAudio" data-toggle="tooltipfooter" title="Stop Song"></a> 
-				<a href="index.html#" class="footerBtn pauseAudio" data-toggle="tooltipfooter" title="Pause Song"></a> 
-				<a href="index.html#" class="footerBtn playAudio" data-toggle="tooltipfooter" title="Play Song"></a> 
-				<a href="index.html#" class="footerBtn listAudio"></a> 
-				<a href="index.html#" class="footerBtn nextAudio" data-toggle="tooltipfooter" title="Next Song"></a> 
-			</div>
-		</div>
 	</footer>
 </div><!-- #body-wrapper -->
 
@@ -537,10 +626,10 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 				<span class="current"></span>
 				<span class="total"></span>
 			</div>
-			<a href="index.html#" class="playerBtn mute"></a>
-			<a href="index.html#" class="playerBtn unmute"></a>
-			<a href="index.html#" class="playerBtn loop"></a>
-			<a href="index.html#" class="playerBtn nextsong"></a>
+			<a href="projects-masonary.html#" class="playerBtn mute"></a>
+			<a href="projects-masonary.html#" class="playerBtn unmute"></a>
+			<a href="projects-masonary.html#" class="playerBtn loop"></a>
+			<a href="projects-masonary.html#" class="playerBtn nextsong"></a>
 			<div id="volumeLoadBar">
 				<div id="volumeBar">
 					<div id="volumeBarActive"></div>
@@ -590,17 +679,5 @@ var twitterEnable = true; // if true twitter data loaded by ajax
 <script type='text/javascript' src='js/jquery.knob.js'></script>
 <script type='text/javascript' src='js/video.js'></script>
 <script type='text/javascript' src='js/jquery.cookie.js'></script>
-<script type='text/javascript' src='js/demo.js'></script>
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-7274521-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 </body>
 </html>
