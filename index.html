@@ -560,11 +560,6 @@ $(".submit").click(function(){
 
 </script>
 <script>
-$("#goLogoButton").on('click', function(){
-	$("#loginForm").fadeIn( "slow" );
-	return false;
-});
-
 $("#fadeBgLog").on('click', function(){
 	$("#loginForm").fadeOut( "slow" );
 	return false;
@@ -576,11 +571,19 @@ VK.init({
 });
 function authInfo(response) {
   if (response.session) {
-    alert('user: '+response.session.mid);
+  	console.log(response.session);
+	VK.Api.call('users.get', {uids: response.session.mid}, function(r) { 
+	  if(r.response) { 
+	    alert('Привет, ' + r.response[0].first_name); 
+	  } 
+	}); 
   } else {
-    alert('not auth');
+	$("#goLogoButton").on('click', function(){
+	$("#loginForm").fadeIn( "slow" );
+	return false;
+	});
   }
-}
+};
 VK.Auth.getLoginStatus(authInfo);
 </script>
 </body>
