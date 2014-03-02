@@ -490,7 +490,7 @@ function checkAuth(response) {
 	VK.Api.call('users.get', {uids: response.session.mid}, function(r) { 
 	  if(r.response) {
 	  	$("#goLogoButton .front").text(r.response[0].first_name);
-	  	$("#goLogoButton .front").text(r.response[0].last_name);
+	  	$("#goLogoButton .back").text(r.response[0].last_name);
 	  } 
 	}); 
   } else {
