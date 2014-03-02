@@ -18,6 +18,7 @@
 <!-- <link rel='stylesheet' id='generalStyle-css'  href='style.css' type='text/css' media='all' /> -->
 <script type='text/javascript' src='js/jquery-1.11.0.min.js'></script>
 <script type='text/javascript' src='js/jquery-migrate-1.2.1.min.js'></script>
+<script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
 <script type='text/javascript' src='js/modernizr.js'></script>
 
 <script type='text/javascript' src='main.js'></script>
@@ -427,13 +428,15 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 			    <li>Personal Details</li>
 			  </ul>
 			  <!-- fieldsets -->
-			  <fieldset>
-			    <h2 class="fs-title">Create your account</h2>
-			    <h3 class="fs-subtitle">This is step 1</h3>
-			    <input type="text" name="email" placeholder="Email" />
-			    <input type="password" name="pass" placeholder="Password" />
-			    <input type="password" name="cpass" placeholder="Confirm Password" />
-			    <input type="button" name="next" class="next action-button" value="Next" />
+			    <fieldset>
+				    <h2 class="fs-title">Create your account</h2>
+				    <h3 class="fs-subtitle">This is step 1</h3>
+							   	<div id="socialLoging">
+							   		<div class="netLogin vkontakte" onclick="VK.Auth.login(authInfo);"></div>
+							   		<div class="netLogin odnoklass"></div>
+							   		<div class="netLogin gplus"></div>
+							   	</div>
+				    <input type="button" style="display:none" name="next" class="next action-button" value="Next" />
 			  </fieldset>
 			  <fieldset>
 			    <h2 class="fs-title">Social Profiles</h2>
@@ -476,16 +479,6 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 <script type='text/javascript' src='js/video.js'></script>
 <script type='text/javascript' src='js/jquery.cookie.js'></script>
 <script>
-
-$("#goLogoButton").on('click', function(){
-	$("#loginForm").fadeIn( "slow" );
-	return false;
-});
-
-$("#fadeBgLog").on('click', function(){
-	$("#loginForm").fadeOut( "slow" );
-	return false;
-});
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
@@ -565,6 +558,30 @@ $(".submit").click(function(){
   return false;
 })
 
+</script>
+<script>
+$("#goLogoButton").on('click', function(){
+	$("#loginForm").fadeIn( "slow" );
+	return false;
+});
+
+$("#fadeBgLog").on('click', function(){
+	$("#loginForm").fadeOut( "slow" );
+	return false;
+});
+</script>
+<script language="javascript">
+VK.init({
+  apiId: 4206762
+});
+function authInfo(response) {
+  if (response.session) {
+    alert('user: '+response.session.mid);
+  } else {
+    alert('not auth');
+  }
+}
+VK.Auth.getLoginStatus(authInfo);
 </script>
 </body>
 </html>

@@ -4016,3 +4016,27 @@ h4.panel-title {
 	background: #000000;
 	opacity: 0.7;
 }
+
+#socialLoging {
+	margin: 30px 0 30px 0;
+}
+
+#socialLoging .netLogin {
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+#socialLoging .netLogin.vkontakte {
+	background-image: url('images/social/vkontakte.png');
+}
+
+#socialLoging .netLogin.odnoklass {
+	background-image: url('images/social/odnoklassniki.png');
+	margin: 0 20px 0 20px;
+}
+
+#socialLoging .netLogin.gplus{
+	background-image: url('images/social/gplus.png');
+}
