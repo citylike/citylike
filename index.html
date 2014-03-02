@@ -478,6 +478,50 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 <script type='text/javascript' src='js/jquery.knob.js'></script>
 <script type='text/javascript' src='js/video.js'></script>
 <script type='text/javascript' src='js/jquery.cookie.js'></script>
+
+
+<script language="javascript">
+VK.init({
+  apiId: 4206762
+});
+function checkAuth(response) {
+  if (response.session) {
+  	console.log(response.session);
+	VK.Api.call('users.get', {uids: response.session.mid}, function(r) { 
+	  if(r.response) {
+	  	$("#goLogoButton .front").text(r.response[0].first_name);
+	  	$("#goLogoButton .front").text(r.response[0].last_name);
+	  } 
+	}); 
+  } else {
+	$("#goLogoButton").on('click', function(){
+	$("#loginForm").fadeIn( "slow" );
+	return false;
+	});
+  }
+};
+
+function getAuthInfo(response) {
+  if (response.session) {
+	VK.Api.call('users.get', {uids: response.session.mid, fields: "sex,bdate,photo_max_orig,relation"}, function(r) { 
+	  if(r.response) { 
+	  	console.log(r.response[0]);
+	  } 
+	});
+  } else {
+	$("#goLogoButton").on('click', function(){
+	$("#loginForm").fadeIn( "slow" );
+	return false;
+	});
+  }
+};
+VK.Auth.getLoginStatus(checkAuth);
+</script>
+
+
+
+
+
 <script>
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
@@ -557,34 +601,14 @@ $(".previous").click(function(){
 $(".submit").click(function(){
   return false;
 })
-
 </script>
+
 <script>
 $("#fadeBgLog").on('click', function(){
 	$("#loginForm").fadeOut( "slow" );
 	return false;
 });
 </script>
-<script language="javascript">
-VK.init({
-  apiId: 4206762
-});
-function authInfo(response) {
-  if (response.session) {
-  	console.log(response.session);
-	VK.Api.call('users.get', {uids: response.session.mid}, function(r) { 
-	  if(r.response) { 
-	    alert('Привет, ' + r.response[0].first_name); 
-	  } 
-	}); 
-  } else {
-	$("#goLogoButton").on('click', function(){
-	$("#loginForm").fadeIn( "slow" );
-	return false;
-	});
-  }
-};
-VK.Auth.getLoginStatus(authInfo);
-</script>
+
 </body>
 </html>
