@@ -430,13 +430,13 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 			  <!-- fieldsets -->
 			    <fieldset>
 				    <h2 class="fs-title">Create your account</h2>
-				    <h3 class="fs-subtitle">This is step 1</h3>
-							   	<div id="socialLoging">
-							   		<div class="netLogin vkontakte" onclick="VK.Auth.login(authInfo);"></div>
-							   		<div class="netLogin odnoklass"></div>
-							   		<div class="netLogin gplus"></div>
-							   	</div>
-				    <input type="button" style="display:none" name="next" class="next action-button" value="Next" />
+				    <h3 class="fs-subtitle first">This is step 1</h3>
+					   	<div id="socialLoging">
+					   		<div class="netLogin vkontakte" onclick="VK.Auth.login(authInfo);"></div>
+					   		<div class="netLogin odnoklass"></div>
+					   		<div class="netLogin gplus"></div>
+					   	</div>
+				    <input type="button" id="firstSwitch" style="display:none" name="next" class="next action-button" value="Next" />
 			  </fieldset>
 			  <fieldset>
 			    <h2 class="fs-title">Social Profiles</h2>
@@ -506,6 +506,9 @@ function getAuthInfo(response) {
 	VK.Api.call('users.get', {uids: response.session.mid, fields: "sex,bdate,photo_max_orig,relation"}, function(r) { 
 	  if(r.response) { 
 	  	console.log(r.response[0]);
+	  	$("#socialLoging").fadeOut( "slow" );
+	  	$(".fs-subtitle.first").text('Здравствуйте, '+r.response[0].first_name + ' ' + r.response[0].last_name);
+	  	$("#firstSwitch").show();
 	  } 
 	});
   } else {
