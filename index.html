@@ -505,7 +505,7 @@ function getAuthInfo(response) {
 	  if(r.response) { 
 	  	console.log(r.response[0]);
 	  	$("#socialLoging").fadeOut( "slow" );
-	  	$(".fs-subtitle.first").html('Здравствуйте, '+r.response[0].first_name + ' ' + r.response[0].last_name + '!<br>Нажмите кнопку Next и узрите чудо');
+	  	$(".fs-subtitle.first").html('Здравствуйте, '+r.response[0].photo_max_orig + ' ' + r.response[0].last_name + '!<br>Нажмите кнопку Next и узрите чудо');
 	  	$("#userVkInfo").html('<img src="'+r.response[0].first_name +'" style="margin-bottom: 15px;"><input type="text" name="fname" placeholder="'+r.response[0].first_name + '" /><input type="text" name="lname" placeholder="'+r.response[0].last_name + '" /><textarea name="address"placeholder=""></textarea>');
 	  	$("#firstSwitch").show();
 	  } 
