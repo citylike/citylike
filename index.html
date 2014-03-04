@@ -50,6 +50,7 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 
 	<!-- BEGIN: Main Menu -->
 	<header id="menu-container">
+		<a id="closeMenu" class="nolink" href="javascript:void(0);"></a>
 		<div id="menu-wrapper">
 			<span id="menuBorder"></span>
 			<!-- BEGIN: Logo -->
@@ -128,9 +129,52 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 			</nav>
 		</div>
 	</header>
-	<a id="openMenu" class="nolink" href="projects-masonary.html#"></a>
+	<a id="openMenu" class="nolink" href="index.html#"></a>
 	<!-- END: Main Menu -->
-	
+	<!-- BEGIN: Main Elements; Please don't change these elements -->
+	<div id="bgPlayer">
+		<div id="mediaWrapper"></div>
+		<div id="bgPattern"></div>
+		<div id="mediaTimer"></div>
+		<div id="bgText">
+			<div class="headerTextWrapper"><div class="headerText"></div></div>
+			<div class="clearfix"></div>
+			<div class="subTextWrapper"><div class="subText"></div></div>
+		</div>
+		<!-- BEGIN: Controller Buttons -->
+		<a class="prevBG" href="javascript:void(0);"></a>
+		<a class="nextBG" href="javascript:void(0);"></a>
+		<div class="itemNumbers">
+			<span class="currentItemNo"></span> <span class="currentItemSeperator">/</span> <span class="totalItemCount"></span>
+			<a href="index.html#" class="currentPlayPause"></a>
+		</div>
+		<div class="screenControl">
+			<a class="fitBG" href="javascript:void(0);"></a>
+			<a class="fitCenterBG" href="javascript:void(0);"></a>
+			<a class="fullCenterBG" href="javascript:void(0);"></a>
+			<a class="bgTextToggle" href="javascript:void(0);"></a>
+		</div>
+		<div class="bgImageLoading">
+			<div id="circleG">
+				<div id="circleG_1" class="circleG"></div>
+				<div id="circleG_2" class="circleG"></div>
+				<div id="circleG_3" class="circleG"></div>
+			</div>
+		</div>
+		<!-- END: Controller Buttons -->
+		
+		<div id="contentLoading">
+			<div id="loading-text">Loading</div>
+			<div class="slider">
+			<div class="line"></div>
+			  <div class="break dot1"></div>
+			  <div class="break dot2"></div>
+			  <div class="break dot3"></div>
+			</div>
+		</div>	
+		
+		<div id="videoExpander"></div>
+	</div>
 	<div id="content">
 		<div id="contentContainer" class="Invisible Centered">
 			<div id="contentBox">

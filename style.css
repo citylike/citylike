@@ -358,8 +358,8 @@ body {
 }
 #closeMenu:before {
   display: block;
-  content: '\f00d';
-  font-family: FontAwesome;
+  content: '\e802';
+  font-family: fontello;
   font-size: 14px;
   line-height: 28px;
   text-align: center;
@@ -384,8 +384,8 @@ body {
 }
 #openMenu:before {
   display: block;
-  content: '\f039';
-  font-family: FontAwesome;
+  content: '\e80d';
+  font-family: fontello;
   font-size: 23px;
   line-height: 33px;
   text-align: center;
