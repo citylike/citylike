@@ -454,10 +454,7 @@ function closeMainMenu(){
 	$('#content, #bgPlayer, #bgImagesContainer').animate({left:10}, {queue:false, duration:1000});
 	if($('#openMenu').is(':hidden') && !$('#menu-container').hasClass('forceClose')){
 		$('#openMenu').stop().show().css({opacity:0}).delay(500).animate({opacity:1}, {duration:300, complete:function(){
-				if(!mobileDevice){
-					$('#menu-container').bind('mouseenter', autoOpenMainMenu);
-					$('#menu-container').bind('mouseleave', autoCloseMainMenu);
-				}
+
 			}
 		});
 	}
@@ -2874,6 +2871,10 @@ function hex(x){  return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDig
   jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
 
 })(jQuery,'sresize');
+
+function showLogin(){
+	
+}
 
 function getCssProperty(property){
 	var vP = "";
