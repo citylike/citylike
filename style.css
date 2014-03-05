@@ -3911,11 +3911,15 @@ h4.panel-title {
 }
 
 .modal-dialog {
-  padding-top: 15%;
+  margin-top: 15%;
 }
 
 .modal-dialog.participate{
-  padding: 3%;
+  margin-top: 3%;
+}
+
+.modal-dialog.userProfileW{
+  margin-top: 3%;
 }
 
 /*
@@ -4301,3 +4305,47 @@ h4.panel-title {
     display: list-item;
 }
 
+.modal-dialog .icon-cancel-circled {
+  float: right;
+  font-size: 2em;
+  color: #ffffff;
+  cursor: pointer;
+
+}
+
+@media all and (min-width:1025px) {
+  .modal-dialog.userProfileW{
+    width: 1024px;
+  }
+  .modal-dialog.participate .icon-cancel-circled {
+    margin-right: -1em;
+  }
+}
+
+@media all and (min-width:960px) and (max-width: 1024px) {
+
+}
+
+@media all and (min-width:801px) and (max-width: 959px) {
+  /* put your css styles in here */
+}
+
+@media all and (min-width:769px) and (max-width: 800px) {
+  /* put your css styles in here */
+}
+
+@media all and (min-width:569px) and (max-width: 768px) {
+  /* put your css styles in here */
+}
+
+@media all and (min-width:481px) and (max-width: 568px) {
+  /* put your css styles in here */
+}
+
+@media all and (min-width:321px) and (max-width: 480px) {
+  /* put your css styles in here */
+}
+
+@media all and (min-width:0px) and (max-width: 320px) {
+  /* put your css styles in here */
+}
