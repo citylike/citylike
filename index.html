@@ -20,7 +20,7 @@
 <script type='text/javascript' src='js/jquery-migrate-1.2.1.min.js'></script>
 <script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
 <script type='text/javascript' src='js/modernizr.js'></script>
-<script type="text/javascript" src="js/jquery.psteps.min.js"></script>
+<script type='text/javascript' src='js/jquery.steps.min.js'></script>
 <script type='text/javascript' src='main.js'></script>
 <script type='text/javascript' src='js/less-1.1.6.js'></script>
 <script type='text/javascript'>
@@ -62,11 +62,11 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 			<nav id="mainmenu">
 				<div class="menu-header">
 					<ul id="menu-main-menu" class="menu">
-						<li id="menu-item-1">						
-							<a href="index.html">
+						<li id="menu-item-1" style="display:none">						
+							<a href="#" data-toggle="modal" data-target="#userProfileModal">
 								<span class="title">
-									<span class="front">ГЛАВНАЯ</span>
-									<span class="back">ГЛАВНАЯ</span>
+									<span class="front"></span>
+									<span class="back"></span>
 								</span>
 							</a>
 						</li>
@@ -80,8 +80,8 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 							</a>
 						</li>
 
-						<li id="menu-item-3" style="display: none;">						
-							<a href="#" data-toggle="modal" data-target="#userProfileModal">
+						<li id="menu-item-3" style="display: none;">			
+							<a href="#" data-toggle="modal" data-target="#userParticipate">
 								<span class="title">
 									<span class="front">УЧАСТВОВАТЬ</span>
 									<span class="back">УЧАСТВОВАТЬ</span>
@@ -99,7 +99,7 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 						</li>
 
 						<li id="menu-item-5">						
-							<a href="projects-masonary.html#">
+							<a href="#">
 								<span class="title">
 									<span class="front">ПРИЗЫ</span>
 									<span class="back">ПРИЗЫ</span>
@@ -482,52 +482,75 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 	</div>
 </div>
 <div id="userProfileW">
-<!-- Modal -->
-<div class="modal fade" id="userProfileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div id="psteps_circle_steps_simple" class="pf-form">
-    <div class="row-fluid">
-        <div class="psteps_circle_titles">
-            <div class="step-title circle-step"><span class="step-order">1</span><span class="step-name hide">Register</span>
-            </div>
-            <div class="step-line"></div>
-            <div class="step-title circle-step"><span class="step-order">2</span><span class="step-name hide">File Claim</span>
-            </div>
-            <div class="step-line"></div>
-            <div class="step-title circle-step"><span class="step-order">3</span><span class="step-name hide">Product Info</span>
-            </div>
-            <div class="step-line"></div>
-            <div class="step-title circle-step"><span class="step-order">4</span><span class="step-name hide">Sale Info</span>
-            </div>
-            <div class="step-line"></div>
-            <div class="step-title circle-step"><span class="step-order">5</span><span class="step-name hide">Troubleshoot Description</span>
-            </div>
-        </div>
-    </div>
-    <div class="row-fluid">
-        <div class="clearfix psteps_circle_contents">
-            <div class="step-content">
-                <div class="before-heading alert alert-success"><i class="icon-pencil"></i> Registering is easy!</div>Content 1...</div>
-            <div
-            class="step-content hide">
-                <div class="before-heading alert alert-success"><i class="icon-phone"></i> After filing your claim, you'll hear from us
-                    shortly.</div>Content 2...</div>
-        <div class="step-content hide">
-            <div class="before-heading alert alert-success"><i class="icon-qrcode"></i> We can process your claim quicker if you provide
-                product information now.</div>Content 3...</div>
-        <div class="step-content hide">Content 4... There is no before heading section on this step.</div>
-        <div
-        class="step-content hide">
-            <div class="before-heading alert alert-success"><i class="icon-align-left"></i> Provide a description of the things you've
-                already done to troubleshoot your problem.</div>Content 5...</div>
-    <div
-    style="clear:both;"></div>
-<button class="next-button btn hide">Next</button>
-<button class="submit-button btn">Done</button>
-<button class="back-button btn">Back</button>
+	<!-- Modal -->
+	<div class="modal fade" id="userProfileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div id="wizardVertical">
+		    <h2>Дмитрий</h2>
+		    <section>
+		        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nulla nunc. Maecenas arcu sem, hendrerit a tempor quis, 
+		            sagittis accumsan tellus. In hac habitasse platea dictumst. Donec a semper dui. Nunc eget quam libero. Nam at felis metus. 
+		            Nam tellus dolor, tristique ac tempus nec, iaculis quis nisi.</p>
+		    </section>
+
+		    <h2>Голоса</h2>
+		    <section>
+		        <p>Donec mi sapien, hendrerit nec egestas a, rutrum vitae dolor. Nullam venenatis diam ac ligula elementum pellentesque. 
+		            In lobortis sollicitudin felis non eleifend. Morbi tristique tellus est, sed tempor elit. Morbi varius, nulla quis condimentum 
+		            dictum, nisi elit condimentum magna, nec venenatis urna quam in nisi. Integer hendrerit sapien a diam adipiscing consectetur. 
+		            In euismod augue ullamcorper leo dignissim quis elementum arcu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		            Vestibulum leo velit, blandit ac tempor nec, ultrices id diam. Donec metus lacus, rhoncus sagittis iaculis nec, malesuada a diam. 
+		            Donec non pulvinar urna. Aliquam id velit lacus.</p>
+		    </section>
+
+		    <h2>Позиция</h2>
+		    <section>
+		        <p>Morbi ornare tellus at elit ultrices id dignissim lorem elementum. Sed eget nisl at justo condimentum dapibus. Fusce eros justo, 
+		            pellentesque non euismod ac, rutrum sed quam. Ut non mi tortor. Vestibulum eleifend varius ullamcorper. Aliquam erat volutpat. 
+		            Donec diam massa, porta vel dictum sit amet, iaculis ac massa. Sed elementum dui commodo lectus sollicitudin in auctor mauris 
+		            venenatis.</p>
+		    </section>
+
+		    <h2>Настройки</h2>
+		    <section>
+		        <p>Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula vulputate. Aliquam sed sem tortor. 
+		            Quisque sed felis ut mauris feugiat iaculis nec ac lectus. Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae. 
+		            Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo tortor.</p>
+		    </section>
+		</div>
+	</div>
 </div>
-</div>
-</div>
-</div>
+<div id="userParticipate">
+	<!-- Modal -->
+	<div class="modal fade" id="userParticipateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog participate">
+			<div id="wizardHorizontal">
+			    <h2>Шаг 1</h2>
+			    <section>
+			        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nulla nunc. Maecenas arcu sem, hendrerit a tempor quis, 
+			            sagittis accumsan tellus. In hac habitasse platea dictumst. Donec a semper dui. Nunc eget quam libero. Nam at felis metus. 
+			            Nam tellus dolor, tristique ac tempus nec, iaculis quis nisi.</p>
+			    </section>
+
+			    <h2>Шаг 2</h2>
+			    <section>
+			        <p>Donec mi sapien, hendrerit nec egestas a, rutrum vitae dolor. Nullam venenatis diam ac ligula elementum pellentesque. 
+			            In lobortis sollicitudin felis non eleifend. Morbi tristique tellus est, sed tempor elit. Morbi varius, nulla quis condimentum 
+			            dictum, nisi elit condimentum magna, nec venenatis urna quam in nisi. Integer hendrerit sapien a diam adipiscing consectetur. 
+			            In euismod augue ullamcorper leo dignissim quis elementum arcu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+			            Vestibulum leo velit, blandit ac tempor nec, ultrices id diam. Donec metus lacus, rhoncus sagittis iaculis nec, malesuada a diam. 
+			            Donec non pulvinar urna. Aliquam id velit lacus.</p>
+			    </section>
+
+			    <h2>Шаг 3</h2>
+			    <section>
+			        <p>Morbi ornare tellus at elit ultrices id dignissim lorem elementum. Sed eget nisl at justo condimentum dapibus. Fusce eros justo, 
+			            pellentesque non euismod ac, rutrum sed quam. Ut non mi tortor. Vestibulum eleifend varius ullamcorper. Aliquam erat volutpat. 
+			            Donec diam massa, porta vel dictum sit amet, iaculis ac massa. Sed elementum dui commodo lectus sollicitudin in auctor mauris 
+			            venenatis.</p>
+			    </section>
+			</div>
+		</div>
+	</div>
 </div>
 
 
@@ -570,14 +593,16 @@ function getAuthInfo(response) {
 	  	$("#menu-item-2").hide();
 	  	$("#menu-item-7").show();
 	  	$('#loginFormModal').modal('hide');
+
 	  	if ( r.response[0].sex == 2 ) {
 	    	$("#menu-item-3").show();
-	    	alert(r.response[0].first_name);
+	    	$("#menu-item-1 .title .front").text(r.response[0].first_name);
+	  		$("#menu-item-1 .title .back").text(r.response[0].last_name);
+	  		$("#menu-item-1").show();
 	  	}
-//	  	$("#socialLoging").fadeOut( "slow" );
-//	  	$(".fs-subtitle.first").html('Здравствуйте, '+r.response[0].first_name + ' ' + r.response[0].last_name + '!<br>Нажмите кнопку Next и узрите чудо');
-//	  	$("#userVkInfo").html('<img src="'+r.response[0].photo_max_orig +'" style="margin-bottom: 15px;"><input type="text" name="fname" placeholder="'+r.response[0].first_name + '" /><input type="text" name="lname" placeholder="'+r.response[0].last_name + '" /><textarea name="address"placeholder=""></textarea>');
-//	  	$("#firstSwitch").show();
+
+	  	//$("#userVkInfo").html('<img src="'+r.response[0].photo_max_orig +'" style="margin-bottom: 15px;"><input type="text" name="fname" placeholder="'+r.response[0//].first_name + '" /><input type="text" name="lname" placeholder="'+r.response[0].last_name + '" /><textarea name="address"placeholder=""></textarea>');
+	  	//$("#firstSwitch").show();
 	  } 
 	});
   } else {
@@ -586,40 +611,34 @@ function getAuthInfo(response) {
 };
 VK.Auth.getLoginStatus(checkAuth);
 </script>
-    <script type="text/javascript">
-        $(function(){
-            /*
-            * ###### CIRCLE DESIGN ######
-            * 
-            * The following is what you need to do to make the pretty numbered
-            * circle style steps!!
-            */
-            // To keep step lines in psteps_circle_steps looking good!
-            var configure_circle_lines = function(circle_container){
-                $(window).resize(function(){
-                    setTimeout(function(){
-                        var step_lines = circle_container.find('.step-line'),
-                            num_circles = circle_container.find('.step-title').length,
-                            container_width = circle_container.width(),
-                            circle_widths = (circle_container.find('.step-title').outerWidth()) * num_circles,
-                            line_width = Math.floor((container_width - circle_widths) / (num_circles - 1));
-                        step_lines.width((line_width < 1) ? 0 : (line_width-1));
-                    }, 200);
-                }).resize();
-            }
-
-            $('#psteps_circle_steps_simple').psteps({
-                traverse_titles: 'visited',
-                steps_width_percentage: false,
-                content_headings: true,
-                step_names: false,
-                check_marks: false,
-                content_headings_after: '.before-heading'
-            });
-
-            configure_circle_lines($('.psteps_circle_titles', '#psteps_circle_steps_simple'));
+<script>
+    $(function ()
+    {
+        $("#wizardVertical").steps({
+            headerTag: "h2",
+            bodyTag: "section",
+            transitionEffect: "slideLeft",
+            stepsOrientation: "vertical",
+            enableAllSteps: true,
+            enableFinishButton: false,
+            enablePagination: false,
+            titleTemplate: '#title#'
         });
-    </script>
+    });
+</script>
+
+<script>
+    $(function ()
+    {
+        $("#wizardHorizontal").steps({
+            headerTag: "h2",
+            bodyTag: "section",
+            transitionEffect: "slideLeft",
+            enableAllSteps: false,
+            titleTemplate: '#title#'
+        });
+    });
+</script>
 
 </body>
 </html>
