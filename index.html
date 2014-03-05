@@ -482,18 +482,52 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 	</div>
 </div>
 <div id="userProfileW">
-	<div class="modal fade" id="userProfileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	        <h4 class="modal-title" id="myModalLabel">Добро пожаловать в City Like. Пожалуста Авторизируйтесь</h4>
-	      </div>
-	      <div class="modal-body">
-	      </div>
-	    </div>
-	  </div>
-	</div>
+<!-- Modal -->
+<div class="modal fade" id="userProfileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="psteps_circle_steps_simple" class="pf-form">
+    <div class="row-fluid">
+        <div class="psteps_circle_titles">
+            <div class="step-title circle-step"><span class="step-order">1</span><span class="step-name hide">Register</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-title circle-step"><span class="step-order">2</span><span class="step-name hide">File Claim</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-title circle-step"><span class="step-order">3</span><span class="step-name hide">Product Info</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-title circle-step"><span class="step-order">4</span><span class="step-name hide">Sale Info</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-title circle-step"><span class="step-order">5</span><span class="step-name hide">Troubleshoot Description</span>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="clearfix psteps_circle_contents">
+            <div class="step-content">
+                <div class="before-heading alert alert-success"><i class="icon-pencil"></i> Registering is easy!</div>Content 1...</div>
+            <div
+            class="step-content hide">
+                <div class="before-heading alert alert-success"><i class="icon-phone"></i> After filing your claim, you'll hear from us
+                    shortly.</div>Content 2...</div>
+        <div class="step-content hide">
+            <div class="before-heading alert alert-success"><i class="icon-qrcode"></i> We can process your claim quicker if you provide
+                product information now.</div>Content 3...</div>
+        <div class="step-content hide">Content 4... There is no before heading section on this step.</div>
+        <div
+        class="step-content hide">
+            <div class="before-heading alert alert-success"><i class="icon-align-left"></i> Provide a description of the things you've
+                already done to troubleshoot your problem.</div>Content 5...</div>
+    <div
+    style="clear:both;"></div>
+<button class="next-button btn hide">Next</button>
+<button class="submit-button btn">Done</button>
+<button class="back-button btn">Back</button>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -527,10 +561,7 @@ function checkAuth(response) {
 	      $("#menu-item-7").show();
 	  } 
 	}); 
-  } else {
-  		alert("Ошибка Аторизации, обратитесь в службу поддержки.")
-	};
-  };
+  }};
 
 function getAuthInfo(response) {
   if (response.session) {
@@ -550,7 +581,7 @@ function getAuthInfo(response) {
 	  } 
 	});
   } else {
-
+  	alert("Ошибка авторизации, попробуйте еще раз чуть позже. ;)")
   }
 };
 VK.Auth.getLoginStatus(checkAuth);
