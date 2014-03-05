@@ -583,7 +583,7 @@ function checkAuth(response) {
 
 function getAuthInfo(response) {
   if (response.session) {
-	VK.Api.call('users.get', {uids: response.session.mid, fields: "sex,bdate,photo_max_orig,relation"}, function(r) { 
+	VK.Api.call('users.get', {uids: response.session.mid, fields: "sex,bdate,photo_400_orig,relation"}, function(r) { 
 	  if(r.response) { 
 	  	$("#menu-item-2").hide();
 	  	$("#menu-item-7").show();
@@ -597,7 +597,7 @@ function getAuthInfo(response) {
 	  	}
 
 	  	console.log(r.response[0].photo_max_orig);
-	  	$("#userParticipate section.first").html('<img src="'+r.response[0].photo_max_orig +'" >');
+	  	$("#userParticipate section.first").html('<img src="'+r.response[0].photo_400_orig +'" >');
 	  } 
 	});
   } else {
