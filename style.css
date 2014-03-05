@@ -3913,3 +3913,85 @@ h4.panel-title {
 .modal-dialog {
   padding-top: 15%;
 }
+
+/* ##psteps_simple# */
+/* ##psteps_add_validation# */
+/* ##psteps_strict# */
+/* ##psteps_conditional_validation# */
+/* ##psteps_simple_horiz_layout# */
+/* ##psteps_horiz_layout# */
+/* ##psteps_circle_steps_simple# */
+/* ##psteps_circle_steps# */
+.step-title {
+    min-height: 20px;
+    float:left;
+    border-radius: 0;
+}
+.next-button, .submit-button, .back-button {
+    float:right;
+    margin:3px;
+}
+@media (max-width:600px) {
+    .step-content {
+        margin-top: 10px;
+    }
+}
+/* #psteps_simple## */
+/* #psteps_add_validation## */
+/* #psteps_strict## */
+/* #psteps_conditional_validation## */
+/* #psteps_simple_horiz_layout## */
+/* #psteps_horiz_layout## */
+/* #psteps_circle_steps_simple## */
+/* #psteps_circle_steps## */
+
+/* ##psteps_simple# */
+/* Vertical Styles */
+#psteps_simple .step-title {
+    padding-left: 0;
+    padding-right: 0;
+    width: 99.5% !important;
+    min-height: 28px;
+    display: block;
+}
+#psteps_simple .step-title .step-order {
+    float: left;
+    margin-left: 12%;
+}
+#psteps_simple .step-title .step-name {
+    float: left;
+    margin-left: 2%;
+}
+#psteps_simple .step-title [class^="icon-"] {
+    float: right;
+    margin-right: 7%;
+    margin-top: 2%;
+}
+
+/* #psteps_conditional_validation## */
+
+/* ##psteps_circle_steps_simple# */
+/* ##psteps_circle_steps# */
+.psteps_circle_titles .circle-step {
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    line-height: 10px;
+    font-size: 10px;
+    border-radius: 500px 500px 500px 500px;
+    min-height:10px;
+    float:left;
+}
+.psteps_circle_titles .step-line {
+    border-bottom: 1px solid #ddd;
+    display: inline-block;
+    width: 20%;
+    float:left;
+    margin-top:10px;
+}
+.psteps_circle_contents {
+    background: #F9F9F9;
+    border: 1px dashed #CCCCCC;
+    margin: 15px 0 0;
+    padding: 20px;
+}
