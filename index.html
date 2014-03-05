@@ -65,26 +65,26 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 						<li id="menu-item-1">						
 							<a href="index.html">
 								<span class="title">
-									<span class="front">HOME</span>
-									<span class="back">HOME</span>
+									<span class="front">ГЛАВНАЯ</span>
+									<span class="back">ГЛАВНАЯ</span>
 								</span>
 							</a>
 						</li>
 						
 						<li id="menu-item-2">						
-							<a id="goLogoButton" href="projects-masonary.html#">
+							<a data-toggle="modal" data-target="#loginFormModal" href="#">
 								<span class="title">
-									<span class="front">LOGIN</span>
-									<span class="back">LOGIN</span>
+									<span class="front">ВОЙТИ</span>
+									<span class="back">ВОЙТИ</span>
 								</span>
 							</a>
 						</li>
 
-						<li id="menu-item-3">						
-							<a href="blog.html">
+						<li id="menu-item-3" style="display: none;">						
+							<a href="#" data-toggle="modal" data-target="#userProfileModal">
 								<span class="title">
-									<span class="front">BLOG</span>
-									<span class="back">BLOG</span>
+									<span class="front">УЧАСТВОВАТЬ</span>
+									<span class="back">УЧАСТВОВАТЬ</span>
 								</span>
 							</a>
 						</li>
@@ -92,8 +92,8 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 						<li id="menu-item-4">						
 							<a href="projects-masonary.html#">
 								<span class="title">
-									<span class="front">GALLERIES</span>
-									<span class="back">GALLERIES</span>
+									<span class="front">УСЛОВИЯ КОНКУРСА</span>
+									<span class="back">УСЛОВИЯ КОНКУРСА</span>
 								</span>
 							</a>
 						</li>
@@ -101,8 +101,8 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 						<li id="menu-item-5">						
 							<a href="projects-masonary.html#">
 								<span class="title">
-									<span class="front">PROJECTS</span>
-									<span class="back">PROJECTS</span>
+									<span class="front">ПРИЗЫ</span>
+									<span class="back">ПРИЗЫ</span>
 								</span>
 							</a>
 						</li>
@@ -110,17 +110,17 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 						<li id="menu-item-6">						
 							<a href="projects-masonary.html#">
 								<span class="title">
-									<span class="front">PORTFOLIOS</span>
-									<span class="back">PORTFOLIOS</span>
+									<span class="front">СОТРУДНИЧЕСТВО</span>
+									<span class="back">СОТРУДНИЧЕСТВО</span>
 								</span>
 							</a>
 						</li>
 
-						<li id="menu-item-7">						
+						<li id="menu-item-7" style="display: none;">						
 							<a href="#" onclick="VK.Auth.logout();return false;">
 								<span class="title">
-									<span class="front">LOGOUT</span>
-									<span class="back">LOGOUT</span>
+									<span class="front">ВЫХОД</span>
+									<span class="back">ВЫХОД</span>
 								</span>
 							</a>
 						</li>
@@ -463,44 +463,38 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 <!-- END:  -->
 
 <div id="loginForm">
-	<div id="fadeBgLog"></div>
-			<form id="msform">
-			  <!-- progressbar -->
-			  <ul id="progressbar">
-			    <li class="active">Account Setup</li>
-			    <li>Social Profiles</li>
-			    <li>Personal Details</li>
-			  </ul>
-			  <!-- fieldsets -->
-			    <fieldset>
-				    <h2 class="fs-title">Create your account</h2>
-				    <h3 class="fs-subtitle first">This is step 1</h3>
-					   	<div id="socialLoging">
-					   		<div class="netLogin vkontakte" onclick="VK.Auth.login(getAuthInfo);"></div>
-					   		<div class="netLogin odnoklass"></div>
-					   		<div class="netLogin gplus"></div>
-					   	</div>
-				    <input type="button" id="firstSwitch" style="display:none" name="next" class="next action-button" value="Next" />
-			  </fieldset>
-			  <fieldset>
-			    <h2 class="fs-title">Social Profiles</h2>
-			    <h3 class="fs-subtitle">Your presence on the social network</h3>
-			   	<div id="userVkInfo"></div>
-			    <input type="button" name="previous" class="previous action-button" value="Previous" />
-			    <input type="button" name="next" class="next action-button" value="Next" />
-			  </fieldset>
-			  <fieldset>
-			    <h2 class="fs-title">Personal Details</h2>
-			    <h3 class="fs-subtitle">We will never sell it</h3>
-			    <input type="text" name="fname" placeholder="First Name" />
-			    <input type="text" name="lname" placeholder="Last Name" />
-			    <input type="text" name="phone" placeholder="Phone" />
-			    <textarea name="address" placeholder="Address"></textarea>
-			    <input type="button" name="previous" class="previous action-button" value="Previous" />
-			    <input type="submit" name="submit" class="submit action-button" value="Submit" />
-			  </fieldset>
-			</form>
-		</div>
+	<div class="modal fade" id="loginFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title" id="myModalLabel">Добро пожаловать в City Like. Пожалуста Авторизируйтесь</h4>
+	      </div>
+	      <div class="modal-body">
+		   	<div id="socialLoging">
+		   		<div class="netLogin vkontakte" onclick="VK.Auth.login(getAuthInfo);"></div>
+		   		<div class="netLogin odnoklass"></div>
+		   		<div class="netLogin gplus"></div>
+		   	</div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>
+<div id="userProfileW">
+	<div class="modal fade" id="userProfileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title" id="myModalLabel">Добро пожаловать в City Like. Пожалуста Авторизируйтесь</h4>
+	      </div>
+	      <div class="modal-body">
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>
 
 
 <script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
@@ -520,25 +514,21 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 <script type='text/javascript' src='js/jquery.knob.js'></script>
 <script type='text/javascript' src='js/video.js'></script>
 <script type='text/javascript' src='js/jquery.cookie.js'></script>
-
-
 <script language="javascript">
 VK.init({
   apiId: 4206762
 });
 function checkAuth(response) {
   if (response.session) {
-  	console.log(response.session);
 	VK.Api.call('users.get', {uids: response.session.mid}, function(r) { 
 	  if(r.response) {
-	  	$("#goLogoButton .front").text(r.response[0].first_name);
-	  	$("#goLogoButton .back").text(r.response[0].last_name);
+	      $("#menu-item-2").hide();
+	      $("#menu-item-3").show();
+	      $("#menu-item-7").show();
 	  } 
 	}); 
   } else {
-	$("#goLogoButton").on('click', function(){
-	$("#loginForm").fadeIn( "slow" );
-	return false;
+  		alert("Ошибка Аторизации, обратитесь в службу поддержки.")
 	});
   }
 };
@@ -547,18 +537,21 @@ function getAuthInfo(response) {
   if (response.session) {
 	VK.Api.call('users.get', {uids: response.session.mid, fields: "sex,bdate,photo_max_orig,relation"}, function(r) { 
 	  if(r.response) { 
-	  	console.log(r.response[0]);
-	  	$("#socialLoging").fadeOut( "slow" );
-	  	$(".fs-subtitle.first").html('Здравствуйте, '+r.response[0].first_name + ' ' + r.response[0].last_name + '!<br>Нажмите кнопку Next и узрите чудо');
-	  	$("#userVkInfo").html('<img src="'+r.response[0].photo_max_orig +'" style="margin-bottom: 15px;"><input type="text" name="fname" placeholder="'+r.response[0].first_name + '" /><input type="text" name="lname" placeholder="'+r.response[0].last_name + '" /><textarea name="address"placeholder=""></textarea>');
-	  	$("#firstSwitch").show();
+	  	$("#menu-item-2").hide();
+	  	$("#menu-item-7").show();
+	  	$('#loginFormModal').modal('hide');
+	  	if ( r.response[0].sex == 2 ) {
+	    	$("#menu-item-3").show();
+	    	alert(r.response[0].first_name);
+	  	}
+//	  	$("#socialLoging").fadeOut( "slow" );
+//	  	$(".fs-subtitle.first").html('Здравствуйте, '+r.response[0].first_name + ' ' + r.response[0].last_name + '!<br>Нажмите кнопку Next и узрите чудо');
+//	  	$("#userVkInfo").html('<img src="'+r.response[0].photo_max_orig +'" style="margin-bottom: 15px;"><input type="text" name="fname" placeholder="'+r.response[0].first_name + '" /><input type="text" name="lname" placeholder="'+r.response[0].last_name + '" /><textarea name="address"placeholder=""></textarea>');
+//	  	$("#firstSwitch").show();
 	  } 
 	});
   } else {
-	$("#goLogoButton").on('click', function(){
-	$("#loginForm").fadeIn( "slow" );
-	return false;
-	});
+
   }
 };
 VK.Auth.getLoginStatus(checkAuth);
