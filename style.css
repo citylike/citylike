@@ -384,7 +384,7 @@ body {
 }
 #openMenu:before {
   display: block;
-  content: '\e80d';
+  content: '\e810';
   font-family: fontello;
   font-size: 23px;
   line-height: 33px;

@@ -7,11 +7,14 @@
 .icon-twitter:before { content: '\e805'; } /* '' */
 .icon-vkontakte:before { content: '\e807'; } /* '' */
 .icon-eye:before { content: '\e803'; } /* '' */
+.icon-export:before { content: '\e80d'; } /* '' */
 .icon-heart-empty:before { content: '\e801'; } /* '' */
-.icon-trophy:before { content: '\e80c'; } /* '' */
 .icon-pinterest-circled:before { content: '\e806'; } /* '' */
+.icon-instagram:before { content: '\e812'; } /* '' */
+.icon-vkontakte-1:before { content: '\e811'; } /* '' */
 .icon-cancel:before { content: '\e802'; } /* '' */
+.icon-menu:before { content: '\e810'; } /* '' */
 .icon-export-1:before { content: '\e80e'; } /* '' */
 .icon-odnoklassniki:before { content: '\e809'; } /* '' */
 .icon-cancel-circled:before { content: '\e80f'; } /* '' */
-.icon-export:before { content: '\e80d'; } /* '' */
+.icon-trophy:before { content: '\e80c'; } /* '' */

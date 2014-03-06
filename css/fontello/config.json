@@ -73,9 +73,27 @@
       "src": "entypo"
     },
     {
+      "uid": "0fbfb1cd7a847c88ea4c141d0e1bbdb5",
+      "css": "instagram",
+      "code": 59410,
+      "src": "entypo"
+    },
+    {
+      "uid": "c9a7eca58474311926922ff8c2c1d256",
+      "css": "vkontakte-1",
+      "code": 59409,
+      "src": "entypo"
+    },
+    {
       "uid": "1dq4tek4k8ea7zlj4kc3w83itnutaxg5",
       "css": "cancel",
       "code": 59394,
+      "src": "typicons"
+    },
+    {
+      "uid": "jh3jpcb1t1bcm80gidkadilh080aq79h",
+      "css": "menu",
+      "code": 59408,
       "src": "typicons"
     },
     {
