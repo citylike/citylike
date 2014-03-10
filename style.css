@@ -957,7 +957,7 @@ a.playerBtn.nextsong:before {
   margin: 0;
   padding: 11px 20px 11px 40px;
   position: relative;
-  color: #000000;
+  color: #ffffff;
   font-size: 16px;
   font-family: 'PT Sans Caption', sans-serif;
 }
@@ -966,14 +966,6 @@ a.playerBtn.nextsong:before {
 #mainmenu ul li a:visited {
   height: 40px;
   position: relative;
-}
-#mainmenu a:hover .front,
-#mainmenu a:focus .front {
-  transform-origin: center bottom 0px;
-  -moz-transform-origin: center bottom 0px;
-  -webkit-transform-origin: center bottom 0px;
-  -o-transform-origin: center bottom 0px;
-  -ms-transform-origin: center bottom 0px;
 }
 #mainmenu .title {
   position: relative;
@@ -985,7 +977,6 @@ a.playerBtn.nextsong:before {
 }
 #mainmenu .front,
 #mainmenu .back {
-  background-color: #ffffff;
   display: block;
   width: 100%;
   height: 100%;
@@ -1105,11 +1096,6 @@ a.playerBtn.nextsong:before {
   #mainmenu ul li ul li a:visited span.title {
     padding: 5px 10px 5px 20px;
     border-right: none;
-  }
-  #mainmenu ul li ul li a:hover span.title,
-  #mainmenu ul li ul li a:active span.title {
-    border-right: none;
-    background-color: transparent;
   }
 }
 /* Footer */

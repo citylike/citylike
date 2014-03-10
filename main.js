@@ -2495,37 +2495,7 @@ function subMenuDoClose(obj, except){
  
 // Main Menu Show Animation
 function showMenu(){
-	$('ul.menu  li  a').hover(function(){
-			if(Modernizr.csstransitions){
-				$(this).find('.front').cssanimate({ 'transform':' matrix3d(1, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, 0, -40, 0, 1) ', opacity:'0'}, {duration:300, ease:'ease-in'});
-				$(this).find('.back').cssanimate({'transform':' matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -40, 0, 1) ', opacity:'1'}, {duration:300, ease:'ease-in'});
-			}else{
-				$(this).find('.front').animate({opacity:0}, 300);
-				$(this).find('.back').animate({opacity:1}, 300);
-			}
-		}, function(){
-			if(Modernizr.csstransitions){
-				$(this).find('.front').cssanimate({'transform':' matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0,  0, 1, 0, 0, 0, 0, 1) ', opacity:'1'}, {duration:300, ease:'ease-in'});
-				$(this).find('.back').cssanimate({'transform':' matrix3d(1, 0, 0, 0, 0, 0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1) ', opacity:'0'}, {duration:300, ease:'ease-in'});
-			}else{
-				$(this).find('.front').animate({opacity:1}, 300);
-				$(this).find('.back').animate({opacity:0}, 300);
-			}
-	});
-	$('ul.menu li').each(function(i,el){
-		if(!Modernizr.touch){
-			$(el).find('> a').hover(function(e){
-				clearTimeout(mainmenutimer);
-				subMenuDo(this);
-			}, function(){
-				subMenuTimer = setTimeout(subMenuDo, 500);
-			});
-		}else{
-			$(el).find('> a').hammer({prevent_default:false}).on("tap", function(e){
-				subMenuDo(this);
-			});
-		}
-	});
+	return true;
 }
 
 function setCaptionPosition(){
