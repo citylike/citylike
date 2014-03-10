@@ -54,7 +54,7 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 		<div id="menu-wrapper">
 			<span id="menuBorder"></span>
 			<!-- BEGIN: Logo -->
-			<div id="logo">
+			<div id="logo" style="visibility: hidden">
 				<img src="images/photodrug-logo.png" alt="PhotoDrugs" >
 				<span id="logoAniBorder"></span>
 			</div>
@@ -445,11 +445,7 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 	</div>
 	<!-- END: Bottom Side Bar -->
 	
-	<footer id="footerArea">
-		<div id="footerLeft" class="footerText">
-						<span>PhotoDrugs Premium Theme</span>
-				</div>
-	</footer>
+
 </div><!-- #body-wrapper -->
 
 <!-- BEGIN: First Loading; Please don't remove this element -->
@@ -596,10 +592,16 @@ function getAuthInfo(response) {
 	  		$("#menu-item-1").show();
 	  	}
 
+	  	VK.Api.call('users.get', {uids: response.session.mid, fields: "sex,bdate,photo_big,relation"}, function(r) {alert('')};
+
 	  	console.log(r.response[0].photo_max_orig);
 	  	$("#userParticipate section.first").html('<img src="'+r.response[0].photo_big +'" >');
 	  } 
-	});
+	};
+
+
+
+	);
   } else {
   	alert("Ошибка авторизации, попробуйте еще раз чуть позже. ;)")
   }

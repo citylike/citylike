@@ -319,7 +319,7 @@ body {
   left: 50%;
   margin-left: -460px;
   top: 15px;
-  bottom: 55px;
+  bottom: 15px;
 }
 #contentContainer.FullPage,
 #contentContainer.FullPageCenter,
@@ -353,8 +353,8 @@ body {
   opacity: 1;
   width: 28px;
   height: 28px;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #424141;
+  color: #ffffff;
 }
 #closeMenu:before {
   display: block;
@@ -883,8 +883,8 @@ a.playerBtn.nextsong:before {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 40px;
-  background: #ffffff;
+  bottom: 0px;
+  background: #424141;
 }
 #menu-container * {
   -webkit-touch-callout: none;
