@@ -186,7 +186,7 @@ function init(){
 		});
 	}
 	
-	if(mobileDevice && $('#menu-container').offset().left<=-230){
+	if(mobileDevice && $('#menu-container').offset().left<=-240){
 		$('#menu-container').addClass('stayClose');
 	}
 	
@@ -444,14 +444,14 @@ function openMainMenu(){
 }
 
 function closeMainMenu(){
-	if($('#menu-container').position().left==-230) return false;
+	if($('#menu-container').position().left==-240) return false;
 	subMenuDoClose($('ul.menu'));
 	$("#contentBox").getNiceScroll().hide();
-	$('#menu-container').animate({left:-230}, {queue:false, duration:1000, complete:function(){
+	$('#menu-container').animate({left:-240}, {queue:false, duration:1000, complete:function(){
 		$("#contentBox").getNiceScroll().resize();
 		$("#contentBox").getNiceScroll().show();
 	}});
-	$('#content, #bgPlayer, #bgImagesContainer').animate({left:10}, {queue:false, duration:1000});
+	$('#content, #bgPlayer, #bgImagesContainer').animate({left:0}, {queue:false, duration:1000});
 	if($('#openMenu').is(':hidden') && !$('#menu-container').hasClass('forceClose')){
 		$('#openMenu').stop().show().css({opacity:0}).delay(500).animate({opacity:1}, {duration:300, complete:function(){
 
