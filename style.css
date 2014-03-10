@@ -2730,7 +2730,7 @@ pre {
 
 }
 #contentBoxContainer .project-filter li {
-
+  display: inline-block;
 }
 #contentBoxContainer .project-filter li a:link,
 #contentBoxContainer .project-filter li a:visited {
