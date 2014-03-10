@@ -2727,35 +2727,23 @@ pre {
   color: #999999;
 }
 #contentBoxContainer .project-filter {
-  list-style: none;
-  margin-bottom: 30px;
+
 }
 #contentBoxContainer .project-filter li {
-  float: left;
+
 }
 #contentBoxContainer .project-filter li a:link,
 #contentBoxContainer .project-filter li a:visited {
-  display: block;
-  padding: 5px 20px 1px 20px;
-  margin-left: 5px;
-  background-color: #000000;
-  border-bottom: 4px solid transparent;
-  color: #ffffff;
+
 }
 #contentBoxContainer .project-filter li a:hover,
 #contentBoxContainer .project-filter li a:active,
 #contentBoxContainer .project-filter li a.selected:link,
 #contentBoxContainer .project-filter li a.selected:visited {
-  background: #ffffff;
-  border-bottom: 4px solid #ffc0cb;
-  color: #000000;
+
 }
 .project-filter:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+
 }
 /* Project Detail */
 h1.project-detail-header,
