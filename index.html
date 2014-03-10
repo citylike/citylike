@@ -468,7 +468,7 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 	      </div>
 	      <div class="modal-body">
 		   	<div id="socialLoging">
-		   		<div class="netLogin vkontakte" onclick="VK.Auth.login(getAuthInfo, 271367);"></div>
+		   		<div class="netLogin vkontakte" onclick="VK.Auth.login(getAuthInfo);"></div>
 		   		<div class="netLogin odnoklass"></div>
 		   		<div class="netLogin gplus"></div>
 		   	</div>
@@ -564,7 +564,7 @@ var twitterEnable = false; // if true twitter data loaded by ajax
 <script type='text/javascript' src='js/jquery.cookie.js'></script>
 <script language="javascript">
 VK.init({
-  apiId: 4206762
+  apiId: 4197205
 });
 function checkAuth(response) {
   if (response.session) {
@@ -599,8 +599,6 @@ function getAuthInfo(response) {
 	  } 
 	};
 
-
-
 	);
   } else {
   	alert("Ошибка авторизации, попробуйте еще раз чуть позже. ;)")
@@ -611,7 +609,7 @@ VK.Auth.getLoginStatus(checkAuth);
 $("#menu-item-7").on("click", function(){
 	VK.Auth.logout();
 	setTimeout(function(){
-		location.reload(true)}, 500);
+		location.reload(true)}, 1000);
 });
 </script>
 <script>
