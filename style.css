@@ -2600,6 +2600,11 @@ pre {
   margin-bottom: 15px;
 }
 .project-item-container {
+  border: 1px #ffffff solid;
+-moz-border-radius: 10px;
+-webkit-border-radius: 7px;
+-khtml-border-radius: 10px;
+border-radius: 7px;
   padding: 2.5%;
   position: relative;
   opacity: 0;
