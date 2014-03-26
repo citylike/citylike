@@ -27,13 +27,11 @@ $(document).ready(function(){
   $(".post_control").toggle(function(){
     jself = $(this);
     $(this).addClass("liked").removeClass("unlike");
-    console.log($(this));
     heart(jself);
     },
         function(){
         jself = $(this);
         $(this).addClass("unlike").removeClass("liked");
-        console.log($(this));
         heart(jself);
     }
 );
@@ -49,6 +47,63 @@ setTimeout(function() {
 }
 });
 });
+</script>
+<script>
+function preventSelection(element){
+  var preventSelection = false;
+
+  function addHandler(element, event, handler){
+    if (element.attachEvent) 
+      element.attachEvent('on' + event, handler);
+    else 
+      if (element.addEventListener) 
+        element.addEventListener(event, handler, false);
+  }
+  function removeSelection(){
+    if (window.getSelection) { window.getSelection().removeAllRanges(); }
+    else if (document.selection && document.selection.clear)
+      document.selection.clear();
+  }
+  function killCtrlA(event){
+    var event = event || window.event;
+    var sender = event.target || event.srcElement;
+
+    if (sender.tagName.match(/INPUT|TEXTAREA/i))
+      return;
+
+    var key = event.keyCode || event.which;
+    if (event.ctrlKey && key == 'A'.charCodeAt(0))  // 'A'.charCodeAt(0) можно заменить на 65
+    {
+      removeSelection();
+
+      if (event.preventDefault) 
+        event.preventDefault();
+      else
+        event.returnValue = false;
+    }
+  }
+
+  addHandler(element, 'mousemove', function(){
+    if(preventSelection)
+      removeSelection();
+  });
+  addHandler(element, 'mousedown', function(event){
+    var event = event || window.event;
+    var sender = event.target || event.srcElement;
+    preventSelection = !sender.tagName.match(/INPUT|TEXTAREA/i);
+  });
+
+  addHandler(element, 'mouseup', function(){
+    if (preventSelection)
+      removeSelection();
+    preventSelection = false;
+  });
+
+  addHandler(element, 'keydown', killCtrlA);
+  addHandler(element, 'keyup', killCtrlA);
+};
+
+preventSelection(document);
 </script>
 </head>
 
@@ -66,7 +121,7 @@ setTimeout(function() {
       <div class="boxInner">
         <img src="images/squareform/1.jpg" />
         <div class="titleBox">        
-
+            <p>Викуля Гарагановская</p>
         </div>
       </div>
     </div>
@@ -77,7 +132,9 @@ setTimeout(function() {
             </div>
       <div class="boxInner">
         <img src="images/squareform/2.jpg" />
-        <div class="titleBox">An old greenhouse</div>
+        <div class="titleBox">
+            <p>Вероника Никакая</p>
+        </div>
       </div>
     </div>
     <div class="box">
@@ -87,7 +144,9 @@ setTimeout(function() {
             </div>
       <div class="boxInner">
         <img src="images/squareform/3.jpg" />
-        <div class="titleBox">Purple wildflowers</div>
+        <div class="titleBox">
+            <p>Светлана Немужская</p>
+        </div>
       </div>
     </div>
     <div class="box">
@@ -97,7 +156,9 @@ setTimeout(function() {
             </div>
       <div class="boxInner">
         <img src="images/squareform/4.jpg" />
-        <div class="titleBox">A birdfeeder</div>
+        <div class="titleBox">
+            <p>Викуля Гарагановская</p>
+        </div>
       </div>
     </div>
     <div class="box">
@@ -107,7 +168,9 @@ setTimeout(function() {
             </div>
       <div class="boxInner">
         <img src="images/squareform/5.jpg" />
-        <div class="titleBox">Crocus close-up</div>
+        <div class="titleBox">
+            <p>Викуля Гарагановская</p>
+        </div>
       </div>
     </div>
     <div class="box">
@@ -117,7 +180,9 @@ setTimeout(function() {
             </div>
       <div class="boxInner">
         <img src="images/squareform/6.jpg" />
-        <div class="titleBox">The garden shop</div>
+        <div class="titleBox">
+            <p>Викуля Гарагановская</p>
+        </div>
       </div>
     </div>
     <div class="box">
@@ -127,7 +192,9 @@ setTimeout(function() {
             </div>
       <div class="boxInner">
         <img src="images/squareform/7.jpg" />
-        <div class="titleBox">Spring daffodils</div>
+        <div class="titleBox">
+            <p>Викуля Гарагановская</p>
+        </div>
       </div>
     </div>
     <div class="box">
@@ -137,7 +204,9 @@ setTimeout(function() {
             </div>
       <div class="boxInner">
         <img src="images/squareform/8.jpg" />
-        <div class="titleBox">Iris along the path</div>
+        <div class="titleBox">
+            <p>Викуля Гарагановская</p>
+        </div>
       </div>
     </div>
     <div class="box">
@@ -147,7 +216,9 @@ setTimeout(function() {
             </div>
       <div class="boxInner">
         <img src="images/squareform/9.jpg" />
-        <div class="titleBox">The garden blueprint</div>
+        <div class="titleBox">
+            <p>Викуля Гарагановская</p>
+        </div>
       </div>
     </div>
     <div class="box">
@@ -157,7 +228,9 @@ setTimeout(function() {
             </div>
       <div class="boxInner">
         <img src="images/squareform/10.jpg" />
-        <div class="titleBox">The patio</div>
+        <div class="titleBox">
+            <p>Марина Подбочинниковская</p>
+        </div>
       </div>
     </div>
     <div class="box">
@@ -167,7 +240,9 @@ setTimeout(function() {
             </div>
       <div class="boxInner">
         <img src="images/squareform/11.jpg" />
-        <div class="titleBox">Bumble bee collecting nectar</div>
+        <div class="titleBox">
+            <p>Светик Ясный</p>
+        </div>
       </div>
     </div>
     <div class="box">
@@ -177,7 +252,9 @@ setTimeout(function() {
             </div>
       <div class="boxInner">
         <img src="images/squareform/12.jpg" />
-        <div class="titleBox">Winding garden path</div>
+        <div class="titleBox">
+            <p>Иришка Малышкиновская</p>
+        </div>
       </div>
     </div>
     
