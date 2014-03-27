@@ -44,9 +44,18 @@ setTimeout(function() {
             n.remove()
         })
 }, 300); 
-}
+};
+$(".heartWrapper").hover(function(){
+  $(this).find("span").css("color", "black" );
+  $(this).find(".post_full .post_control").css("color", "#f66");
+}, function(){
+  $(this).find("span").css("color", "#aaa" );
+  $(this).find(".post_full .post_control").css("color", "#aaa");
 });
 });
+});
+
+
 </script>
 <script>
 function preventSelection(element){
@@ -133,7 +142,7 @@ preventSelection(document);
           <img src="images/squareform/1.jpg" />
         </div>
         <div class="titleBox">        
-            <span class="memberName">Викуля Гарагановская</span>
+            <a href="#" class="memberName">Викуля Гарагановская</a>
             <div class="heartWrapper">
                     <div class="post_full">
                 <div class="post_control  icon-heart-1 like" title="Like"> 
@@ -151,7 +160,7 @@ preventSelection(document);
           <img src="images/squareform/2.jpg" />
         </div>
         <div class="titleBox">
-            <span class="memberName">Вероника Никакая</span>
+            <a href="#" class="memberName">Вероника Никакая</a>
                         <div class="heartWrapper">
                     <div class="post_full">
                 <div class="post_control  icon-heart-1 like" title="Like"> 
@@ -169,7 +178,7 @@ preventSelection(document);
         <img src="images/squareform/3.jpg" />
       </div>
         <div class="titleBox">
-            <span class="memberName">Светлана Немужская</span>
+            <a href="#" class="memberName">Светлана Немужская</a>
                         <div class="heartWrapper">
                     <div class="post_full">
                 <div class="post_control  icon-heart-1 like" title="Like"> 
@@ -187,7 +196,7 @@ preventSelection(document);
         <img src="images/squareform/4.jpg" />
       </div>
         <div class="titleBox">
-            <span class="memberName">Викуля Гарагановская</span>
+            <a href="#" class="memberName">Викуля Гарагановская</a>
             <div class="heartWrapper">
                     <div class="post_full">
                 <div class="post_control  icon-heart-1 like" title="Like"> 
@@ -205,7 +214,7 @@ preventSelection(document);
         <img src="images/squareform/5.jpg" />
       </div>
         <div class="titleBox">
-            <span class="memberName">Викуля Гарагановская</span>
+            <a href="#" class="memberName">Викуля Гарагановская</a>
             <div class="heartWrapper">
                     <div class="post_full">
                 <div class="post_control  icon-heart-1 like" title="Like"> 
@@ -222,7 +231,7 @@ preventSelection(document);
         <img src="images/squareform/6.jpg" />
       </div>
         <div class="titleBox">
-            <span class="memberName">Викуля Гарагановская</span>
+            <a href="#" class="memberName">Викуля Гарагановская</a>
             <div class="heartWrapper">
                     <div class="post_full">
                 <div class="post_control  icon-heart-1 like" title="Like"> 
@@ -240,7 +249,7 @@ preventSelection(document);
         <img src="images/squareform/7.jpg" />
       </div>
         <div class="titleBox">
-            <span class="memberName">Викуля Гарагановская</span>
+            <a href="#" class="memberName">Викуля Гарагановская</a>
             <div class="heartWrapper">
                     <div class="post_full">
                 <div class="post_control  icon-heart-1 like" title="Like"> 
@@ -257,7 +266,7 @@ preventSelection(document);
         <img src="images/squareform/8.jpg" />
       </div>
         <div class="titleBox">
-            <span class="memberName">Викуля Гарагановская</span>
+            <a href="#" class="memberName">Викуля Гарагановская</a>
             <div class="heartWrapper">
                     <div class="post_full">
                 <div class="post_control  icon-heart-1 like" title="Like"> 
@@ -274,7 +283,7 @@ preventSelection(document);
         <img src="images/squareform/9.jpg" />
       </div>
         <div class="titleBox">
-            <span class="memberName">Викуля Гарагановская</span>
+            <a href="#" class="memberName">Викуля Гарагановская</a>
             <div class="heartWrapper">
                     <div class="post_full">
                 <div class="post_control  icon-heart-1 like" title="Like"> 
@@ -292,7 +301,7 @@ preventSelection(document);
         <img src="images/squareform/10.jpg" />
       </div>
         <div class="titleBox">
-            <span class="memberName">Марина Подбочинниковская</span>
+            <a href="#" class="memberName">Марина Подбочинниковская</a>
             <div class="heartWrapper">
                     <div class="post_full">
                 <div class="post_control  icon-heart-1 like" title="Like"> 
@@ -310,7 +319,7 @@ preventSelection(document);
         <img src="images/squareform/11.jpg" />
       </div>
         <div class="titleBox">
-            <span class="memberName">Светик Ясный</span>
+            <a href="#" class="memberName">Светик Ясный</a>
             <div class="heartWrapper">
                     <div class="post_full">
                 <div class="post_control  icon-heart-1 like" title="Like"> 
@@ -328,7 +337,7 @@ preventSelection(document);
         <img src="images/squareform/12.jpg" />
       </div>
         <div class="titleBox">
-            <span class="memberName">Иришка Малышкиновская</span>
+            <a href="#" class="memberName">Иришка Малышкиновская</a>
             <div class="heartWrapper">
                     <div class="post_full">
                 <div class="post_control  icon-heart-1 like" title="Like"> 

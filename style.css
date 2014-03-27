@@ -32,6 +32,7 @@
     .boxInner img {
       display: block;
       width: 100%;
+      cursor: pointer;
     }
 
     .titleBox {
@@ -43,9 +44,14 @@
     }
 
     .titleBox .memberName {
+    	color: #aaa;
     	overflow: hidden;
     	width: 194px;
 		display: inline-block;
+    }
+
+    .titleBox .memberName:hover {
+    	color: #000000;
     }
 
     .titleBox .heartWrapper {
@@ -434,7 +440,7 @@
 }
 
 .post_full .post_control.like.liked {
-	color: #ff0000;
+	color: #f66!important;
 }
 
 .post_full .post_control.like.liked:after {
