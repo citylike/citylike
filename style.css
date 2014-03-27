@@ -9,11 +9,11 @@
       margin: 10px auto;
     }
     .box {
+      padding: 10px;
       display: inline-block;
       position: relative;
       margin: 1%;
-      width: 30%;
-      padding-bottom: 35%;
+      width: 28%;
       background-color: #ffffff;
       -webkit-border-radius: 3px;
 	  -moz-border-radius: 3px;
@@ -22,22 +22,26 @@
 	  -moz-box-shadow: 0px 2px 6px 0px rgba(109, 109, 109, 0.75);
 	  box-shadow: 0px 2px 6px 0px rgba(109, 109, 109, 0.75);
     }
-    .boxInner {
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      top: 10px;
-      bottom: 10px;
-      overflow: hidden;
+
+    .boxInner .imgWrapper {
+    	background-color: #000000;
     }
+
     .boxInner img {
+      display: block;
       width: 100%;
     }
 
     .titleBox {
-    	padding-top: 5px;
 		font-size: 16px;
-		text-align: left;
+		text-align: right;
+    }
+
+    .titleBox p {
+    	text-align: left;
+        border-bottom: 1px solid #ededed;
+        padding-bottom: 15px;
+        margin-bottom: 0;
     }
 /* Hack and hardcode for diffrent sizes of desktop version display grid */
 @media all and (min-width:1181px) {
@@ -76,14 +80,12 @@
 @media all and (min-width:321px) and (max-width: 655px) {
   .box {
   	width: 45%;
-  	padding-bottom: 56%;
   }
 }
 
 @media all and (min-width:0px) and (max-width: 320px) {
   .box {
   	width: 95%;
-  	padding-bottom: 113%;
   }
 }
 
@@ -369,8 +371,9 @@
     }
 }
 .post_full {
-	width: 45px;
-	height: 40px;
+	display: inline-block;
+	width: 35px;
+	height: 30px;
     font-size: 14px;
 }
 .post_full .poof {
@@ -395,7 +398,7 @@
     -ms-transform-origin: 50% 50%;
 }
 .post_full .post_control {
-	font-size: 26px;
+	font-size: 18px;
     color: #C0C0C0;
     position: relative;
     display: inline-block;
@@ -496,13 +499,6 @@
     -ms-animation: unlike_heartbreak_right .6s ease-out;
     -o-animation: unlike_heartbreak_right .6s ease-out;
     animation: unlike_heartbreak_right .6s ease-out;
-}
-
-.post_full {
-    position:absolute;
-    z-index: 150;
-	bottom: 14px;
-	right: 14px;
 }
 
 /* End heart animation browsers styles */
