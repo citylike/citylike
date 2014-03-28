@@ -225,7 +225,7 @@
         <h4 class="modal-title" id="myModalLabel">Вход</h4>
       </div>
       <div class="modal-body">
-<ul class="social-links">           <li><a href="/auth/facebook" class="fb">Facebook</a></li> <li><a href="/auth/vkontakte" class="vk">Вконтакте</a></li> <li><a href="/auth/twitter" class="tw">Twitter</a></li> <li><a href="/auth/google_oauth2" class="gplus">Google +</a></li>         </ul>
+<ul class="social-links">           <li><a href="/auth/facebook" class="fb">Facebook</a></li> <li><a href="javascript:void(0)" onclick="VK.Auth.login(authInfo);" class="vk">Вконтакте</a></li> <li><a href="/auth/twitter" class="tw">Twitter</a></li> <li><a href="/auth/google_oauth2" class="gplus">Google +</a></li>         </ul>
 	  </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

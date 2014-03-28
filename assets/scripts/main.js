@@ -1,4 +1,3 @@
-$(window).load(function(){
 $(document).ready(function(){
     var jself;
   $(".post_control").toggle(function(){
@@ -28,8 +27,6 @@ $(".heartWrapper").hover(function(){
 }, function(){
   $(this).find("span").css("color", "#aaa" );
   $(this).find(".post_full .post_control").css("color", "#aaa");
-});
-});
 });
 
 function preventSelection(element){
@@ -88,14 +85,26 @@ function preventSelection(element){
 
 preventSelection(document);
 
-         jQuery(function($) {
-             $('.imgWrapper img').mouseover(function() {
-                 $(this).stop(true).delay(0).animate({
-                     opacity: 0.90
-                 }, 'fast');
-             }).mouseout(function() {
-                 $(this).stop(true).delay(0).animate({
-                     opacity: 1
-                 }, 'fast');
-             });
-         });
+$('.imgWrapper img').mouseover(function() {
+ $(this).stop(true).delay(0).animate({
+	 opacity: 0.90
+ }, 'fast');
+}).mouseout(function() {
+ $(this).stop(true).delay(0).animate({
+	 opacity: 1
+ }, 'fast');
+});
+
+VK.init({
+  apiId: 4206762
+});
+function authInfo(response) {
+  if (response.session) {
+    alert('user: '+response.session.mid);
+  } else {
+    alert('not auth');
+  }
+}
+VK.Auth.getLoginStatus(authInfo);
+
+});
