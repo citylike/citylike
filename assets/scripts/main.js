@@ -95,16 +95,4 @@ $('.imgWrapper img').mouseover(function() {
  }, 'fast');
 });
 
-VK.init({
-  apiId: 4206762
-});
-function authInfo(response) {
-  if (response.session) {
-    alert('user: '+response.session.mid);
-  } else {
-    alert('not auth');
-  }
-}
-VK.Auth.getLoginStatus(authInfo);
-
 });

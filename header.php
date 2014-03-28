@@ -13,6 +13,19 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
 	<script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
+	<script language="javascript">
+		VK.init({
+		  apiId: 4206762
+		});
+		function authInfo(response) {
+		  if (response.session) {
+			alert('user: '+response.session.mid);
+		  } else {
+			alert('not auth');
+		  }
+		}
+		VK.Auth.getLoginStatus(authInfo);
+	</script>
 
 	<title>City Like</title>
   
