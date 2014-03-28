@@ -1,140 +1,5 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
-  <!-- Enable responsive view on mobile devices -->
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fontello/css/fontello.css">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-  <title>Responsive Tiled Photo Gallery in Pure CSS</title>
-  
-  <!-- Enable media queries for old IE -->
-  <!--[if lt IE 9]>
-	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-  <![endif]-->
-<script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
-
-<script type='text/javascript'>
-$(window).load(function(){
-$(document).ready(function(){
-    var jself;
-  $(".post_control").toggle(function(){
-    jself = $(this);
-    $(this).addClass("liked").removeClass("unlike");
-    heart(jself);
-    },
-        function(){
-        jself = $(this);
-        $(this).addClass("unlike").removeClass("liked");
-        heart(jself);
-    }
-);
-
-function heart(jself) {
-var n = $('<div class="post_animated_heart poof"><span class="heart_left"></span><span class="heart_right"></span></div>');
-jself.append(n);
-setTimeout(function() {
-        n.fadeOut(200, function() {
-            n.remove()
-        })
-}, 300); 
-};
-$(".heartWrapper").hover(function(){
-  $(this).find("span").css("color", "black" );
-  $(this).find(".post_full .post_control").css("color", "#f66");
-}, function(){
-  $(this).find("span").css("color", "#aaa" );
-  $(this).find(".post_full .post_control").css("color", "#aaa");
-});
-});
-});
-
-
-</script>
-<script>
-function preventSelection(element){
-  var preventSelection = false;
-
-  function addHandler(element, event, handler){
-    if (element.attachEvent) 
-      element.attachEvent('on' + event, handler);
-    else 
-      if (element.addEventListener) 
-        element.addEventListener(event, handler, false);
-  }
-  function removeSelection(){
-    if (window.getSelection) { window.getSelection().removeAllRanges(); }
-    else if (document.selection && document.selection.clear)
-      document.selection.clear();
-  }
-  function killCtrlA(event){
-    var event = event || window.event;
-    var sender = event.target || event.srcElement;
-
-    if (sender.tagName.match(/INPUT|TEXTAREA/i))
-      return;
-
-    var key = event.keyCode || event.which;
-    if (event.ctrlKey && key == 'A'.charCodeAt(0))  // 'A'.charCodeAt(0) можно заменить на 65
-    {
-      removeSelection();
-
-      if (event.preventDefault) 
-        event.preventDefault();
-      else
-        event.returnValue = false;
-    }
-  }
-
-  addHandler(element, 'mousemove', function(){
-    if(preventSelection)
-      removeSelection();
-  });
-  addHandler(element, 'mousedown', function(event){
-    var event = event || window.event;
-    var sender = event.target || event.srcElement;
-    preventSelection = !sender.tagName.match(/INPUT|TEXTAREA/i);
-  });
-
-  addHandler(element, 'mouseup', function(){
-    if (preventSelection)
-      removeSelection();
-    preventSelection = false;
-  });
-
-  addHandler(element, 'keydown', killCtrlA);
-  addHandler(element, 'keyup', killCtrlA);
-};
-
-preventSelection(document);
-</script>
-
-<script>
-         jQuery(function($) {
-             $('.imgWrapper img').mouseover(function() {
-                 $(this).stop(true).delay(0).animate({
-                     opacity: 0.90
-                 }, 'fast');
-             }).mouseout(function() {
-                 $(this).stop(true).delay(0).animate({
-                     opacity: 1
-                 }, 'fast');
-             });
-         });
-</script>
-</head>
-
-<body class="no-touch">
-
-
-  <div class="wrap">
-    
+<div class="wrap">
+   <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg btn-block">Login</button>
     <!-- Define all of the tiles: -->
     <div class="box">            
       <div class="boxInner">
@@ -350,6 +215,22 @@ preventSelection(document);
     </div>
     
   </div>
-  <!-- /#wrap -->
-</body>
-</html>
+  
+  <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Вход</h4>
+      </div>
+      <div class="modal-body">
+<ul class="social-links">           <li><a href="/auth/facebook" class="fb">Facebook</a></li> <li><a href="/auth/vkontakte" class="vk">Вконтакте</a></li> <li><a href="/auth/twitter" class="tw">Twitter</a></li> <li><a href="/auth/google_oauth2" class="gplus">Google +</a></li>         </ul>
+	  </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
