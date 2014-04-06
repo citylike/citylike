@@ -85,14 +85,11 @@ function preventSelection(element){
 
 preventSelection(document);
 
-$('.imgWrapper img').mouseover(function() {
- $(this).stop(true).delay(0).animate({
-	 opacity: 0.90
- }, 'fast');
-}).mouseout(function() {
- $(this).stop(true).delay(0).animate({
-	 opacity: 1
- }, 'fast');
-});
-
+$('.boxInner .imgWrapper').hover(  
+   function(){  
+      $(this).find('img').stop().fadeTo('fast', 0.9);  
+   },  
+   function(){  
+      $(this).find('img').stop().fadeTo('fast', 1);  
+   }); 
 });
