@@ -1,4 +1,4 @@
-<div id="menu">
+<div id="menu" style="display:none">
 	<button type="button" class="btn btn-primary">Правила</button>
 	<button type="button" class="btn btn-primary">Призы</button>
 	<button type="button" class="btn btn-primary">О Проекте</button>
@@ -12,6 +12,26 @@
 	<a href="?authorization=exit"><?php echo $user_info['first_name']; ?> <?php echo $user_info['last_name']; ?> <img class="net_avatar" src="<?php echo $user_info['network_avatar']; ?>" ></a>
 	<?php endif; ?>
 </div>
+<div id="header" class="group">
+	<div id="header-inner" class="group">
+      <form id="search" action="http://dribbble.com/search">
+        <input type="search" name="q" placeholder="Поиск... " value=""> 
+      </form>
+  <ul id="nav">
+
+    <li>
+      <a href="#">
+        <span>Призы</span>
+</a>    </li>
+    <li>
+      <a href="#">Правила</a>
+    </li>
+    <li>
+      <a href="#">Помощь</a>
+    </li>
+  </ul>
+</div></div>
+
 <div class="wrap">
 	
 	<?php foreach ($members as $member) : ?>
