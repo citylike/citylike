@@ -30,10 +30,31 @@
       <a href="#">Помощь</a>
     </li>
   </ul>
-</div></div>
+
+	<div id="nav-user-info">
+		<?php if (! $user_info): ?>
+		<a class="sign-up" data-toggle="modal" data-target="#myModal" href="#">Войти</a>
+		<?php endif; ?>
+		
+	  	<?php if ($user_info): ?>
+		<a href="?authorization=exit"><?php echo $user_info['first_name']; ?> <?php echo $user_info['last_name']; ?> <img class="net_avatar" src="<?php echo $user_info['network_avatar']; ?>" ></a>
+		<?php endif; ?>
+	</div>
+	<div class="clearfix"></div>
+
+</div>
+</div>
 
 <div class="wrap">
-	
+	<div id="user-interface">
+		<div id="filters">
+			<button type="button" class="btn btn-default">ТОП 5</button>
+			<button type="button" class="btn btn-default">По дате</button>
+			<button type="button" class="btn btn-default">По популярности</button>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div id="pol-grid">
 	<?php foreach ($members as $member) : ?>
     <div class="box">            
       <div class="boxInner">
@@ -53,6 +74,7 @@
       </div>
     </div>
 	<?php endforeach; ?>
+	</div>
 	
 </div>
   

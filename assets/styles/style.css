@@ -115,9 +115,17 @@ background: rgba(47,47,47,0.98);
 }
 
 #header-inner {
+font-size: 1.5em;
 max-width: 970px;
 margin: 0 auto;
 position: relative;
+}
+
+.sign-up {
+	display: block;
+	height: 50px;
+	padding: 0 10px;
+	line-height: 60px;
 }
 
 #nav {
@@ -133,8 +141,16 @@ color: #777;
 
 #nav>li {
 float: left;
-font-size: 1.5em;
 line-height: 1;
+}
+
+#header-inner a {
+	text-decoration: none;
+	color: #999;
+}
+
+#header-inner a:hover{
+	color: #ddd;
 }
 
 #nav>li>a {
@@ -142,8 +158,11 @@ display: block;
 height: 50px;
 padding: 0 10px;
 line-height: 60px;
-text-decoration: none;
-color: #999;
+}
+
+#nav-user-info {
+	position: absolute;
+	right: 50px;
 }
 
 ol, ul {
@@ -198,6 +217,7 @@ input::-webkit-input-placeholder {
 }
 
 .net_avatar {
+	border: 2px solid #fff;
 	border-radius: 50%;
 }
 
@@ -206,6 +226,22 @@ input::-webkit-input-placeholder {
   text-align: center;
   margin: 10px auto;
 }
+
+#user-interface {
+padding-top: 15px;
+padding-bottom: 25px;
+}
+
+#filters {
+float: left;
+padding-left: 20px;
+}
+
+#pol-grid {
+padding-top: 10px;
+border-top: 1px solid #ddd;
+}
+
 .box {
   padding: 10px;
   display: inline-block;

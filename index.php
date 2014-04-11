@@ -9,7 +9,7 @@ class City_Like_Project
 	//private $DB_host = 'localhost';
 	//private $DB_username = 'root';
 	//private $DB_password = '';
-	//private $city_salt = '613152196cb8a9243d5ef9d751bdc0e4';
+	private $city_salt = '613152196cb8a9243d5ef9d751bdc0e4';
 
 	public function __construct()
 	{
@@ -69,7 +69,7 @@ class City_Like_Project
 	**/
 	private function isAuth()
 	{
-		if (isset($_COOKIE['session_id'])) {
+		if (isset($_COOKIE['session_id']) && !empty($_COOKIE['session_id'])) {
 			
 			$session_id = $_COOKIE['session_id'];
 			
@@ -161,10 +161,9 @@ class City_Like_Project
 				exit('odnoklassniki');
 				break;
 			case 'exit':
-				if (isset($_COOKIE['session_id'])) {
-					unset($_COOKIE['session_id']);
-					setcookie('session_id', null, -1, '/');
-					return true;
+				if (isset($_COOKIE['session_id']) && !empty($_COOKIE['session_id'])) {
+					setcookie('session_id', '', time()-3600);
+					header("Location:index.php");
 				} else {
 					return false;
 				}

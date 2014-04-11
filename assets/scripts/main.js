@@ -21,13 +21,7 @@ setTimeout(function() {
         })
 }, 300); 
 };
-$(".heartWrapper").hover(function(){
-  $(this).find("span").css("color", "black" );
-  $(this).find(".post_full .post_control").css("color", "#f66");
-}, function(){
-  $(this).find("span").css("color", "#aaa" );
-  $(this).find(".post_full .post_control").css("color", "#aaa");
-});
+
 
 function preventSelection(element){
   var preventSelection = false;
