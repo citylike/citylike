@@ -1,5 +1,8 @@
 <?php
 
+ error_reporting(E_ALL);
+ ini_set('display_errors', 1);
+
 class City_Like_Project 
 {
 	private $DB_host = '109.120.150.218';
