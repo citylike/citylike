@@ -135,36 +135,38 @@ class City_Like_Project
 	
 	public function route()
 	{
-		if (! isset ($_GET['authorization']) ) return false;
+		if (! isset ($_GET['authorization']) && ! isset ($_GET['code'])) return false;
 		
-		switch ($_GET['authorization']) {
-			case 'vk':
-				//if (isset($_POST['user_data'])) echo json_decode($_POST['user_data']['uid']); exit;
-				if (isset($_POST['user_data'])) {
-					$user_data = $_POST['user_data'];
-					
-					$first_name = $user_data['first_name'];
-					$last_name = $user_data['last_name'];
-					$birth_day = $user_data['bdate'];
-					$network_avatar = $user_data['photo_small'];
-					$network_id = (string)$user_data['uid'];
-					$sex = $user_data['sex'];
-					$network = 'vk';
-					
-					exit ($this->addUser($first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network));
-				}
-				break;
-			case 'email':
-				exit('email');
-				break;
-			case 'exit':
-				if (isset($_COOKIE['session_id']) && !empty($_COOKIE['session_id'])) {
-					setcookie('session_id', '', time()-3600);
-					header("Location:index.php");
-				} else {
-					return false;
-				}
-				break;
+		if (isset ($_GET['authorization'])) {
+			switch ($_GET['authorization']) {
+				case 'vk':
+					//if (isset($_POST['user_data'])) echo json_decode($_POST['user_data']['uid']); exit;
+					if (isset($_POST['user_data'])) {
+						$user_data = $_POST['user_data'];
+						
+						$first_name = $user_data['first_name'];
+						$last_name = $user_data['last_name'];
+						$birth_day = $user_data['bdate'];
+						$network_avatar = $user_data['photo_small'];
+						$network_id = (string)$user_data['uid'];
+						$sex = $user_data['sex'];
+						$network = 'vk';
+						
+						exit ($this->addUser($first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network));
+					}
+					break;
+				case 'email':
+					exit('email');
+					break;
+				case 'exit':
+					if (isset($_COOKIE['session_id']) && !empty($_COOKIE['session_id'])) {
+						setcookie('session_id', '', time()-3600);
+						header("Location:index.php");
+					} else {
+						return false;
+					}
+					break;
+			}
 		}
 		
 		if($_GET['code']) {

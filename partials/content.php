@@ -127,7 +127,7 @@
 					<div class="login-form">
 						<ul class="social-links">
 							<li>
-							<a href="javascript:void(0)" class="fb">Instagram</a>
+							<a href="https://api.instagram.com/oauth/authorize/?client_id=1658ab65bb8b480a869d1be346857070&amp;redirect_uri=http://city-like.ru&amp;response_type=code" class="ig">Instagram</a>
 							</li> 
 							<li>
 							<a href="javascript:void(0)" onclick="VK.Auth.login(authInfo);" class="vk">Вконтакте</a>
