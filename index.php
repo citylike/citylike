@@ -186,7 +186,6 @@ class City_Like_Project
 					'code'                     =>     $code
 			);
 			$curl = curl_init($url);    // we init curl by passing the url
-			if ($curl) echo 1;
  			curl_setopt($curl,CURLOPT_POST,true);   // to send a POST request
 			curl_setopt($curl,CURLOPT_POSTFIELDS,$access_token_parameters);   // indicate the data to send
 			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);   // to return the transfer as a string of the return value of curl_exec() instead of outputting it out directly.
@@ -200,7 +199,7 @@ class City_Like_Project
 			$first_name = $user_data['user']['full_name'];
 			$last_name = '';
 			$birth_day = '';
-			$network_avatar = $user_data['user']['photo_small'];
+			$network_avatar = $user_data['user']['profile_picture'];
 			$network_id = (string)$user_data['user']['id'];
 			$sex = '';
 			$network = 'ig';
