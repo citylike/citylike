@@ -154,11 +154,8 @@ class City_Like_Project
 					exit ($this->addUser($first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network));
 				}
 				break;
-			case 'ig':
-				exit('instagram');
-				break;
-			case 'odn':
-				exit('odnoklassniki');
+			case 'email':
+				exit('email');
 				break;
 			case 'exit':
 				if (isset($_COOKIE['session_id']) && !empty($_COOKIE['session_id'])) {
@@ -168,6 +165,29 @@ class City_Like_Project
 					return false;
 				}
 				break;
+		}
+		
+		if($_GET['code']) {
+			$code = $_GET['code'];
+			$url = "https://api.instagram.com/oauth/access_token";
+			$access_token_parameters = array(
+					'client_id'                =>     '1658ab65bb8b480a869d1be346857070',
+					'client_secret'            =>     'd90e5c3697b442aba27601e09594b181',
+					'grant_type'               =>     'authorization_code',
+					'redirect_uri'             =>     'http://city-like.ru',
+					'code'                     =>     $code
+			);
+			$curl = curl_init($url);    // we init curl by passing the url
+			curl_setopt($curl,CURLOPT_POST,true);   // to send a POST request
+			curl_setopt($curl,CURLOPT_POSTFIELDS,$access_token_parameters);   // indicate the data to send
+			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);   // to return the transfer as a string of the return value of curl_exec() instead of outputting it out directly.
+			curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);   // to stop cURL from verifying the peer's certificate.
+			$result = curl_exec($curl);   // to perform the curl session
+			curl_close($curl);   // to close the curl session
+
+			$arr = json_decode($result,true);
+
+			var_dump($arr);
 		}
 	}
 }

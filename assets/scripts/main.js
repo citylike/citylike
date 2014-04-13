@@ -1,26 +1,24 @@
 $(document).ready(function(){
-    var jself;
-  $(".post_control").toggle(function(){
-    jself = $(this);
-    $(this).addClass("liked").removeClass("unlike");
-    heart(jself);
-    },
-        function(){
-        jself = $(this);
-        $(this).addClass("unlike").removeClass("liked");
-        heart(jself);
-    }
-);
+var count = true;
+$("div.like").click(function(){
+  var heart = $('<div class="post_animated_heart post_poof"><span class="heart_left"></span><span class="heart_right"></span></div>').toggleClass("unliked", count = !count);
+  
+  $(this).toggleClass("liked").append(heart);
+  
+    heart.fadeOut(400, function() {
+      heart.remove()
+    })
+});
 
-function heart(jself) {
-var n = $('<div class="post_animated_heart poof"><span class="heart_left"></span><span class="heart_right"></span></div>');
-jself.append(n);
-setTimeout(function() {
-        n.fadeOut(200, function() {
-            n.remove()
-        })
-}, 300); 
-};
+$("#switch_registration_form").click(function() {
+    $("#login-modal").modal('hide');
+    $("#registration-modal").modal('show');
+});
+
+$("#switch_login_form").click(function() {
+    $("#registration-modal").modal('hide');
+    $("#login-modal").modal('show');
+});
 
 
 function preventSelection(element){

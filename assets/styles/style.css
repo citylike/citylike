@@ -38,6 +38,34 @@ body.modal-open {
 	border-top: none;
 }
 
+.close_login {
+display: block;
+width: 38px;
+height: 38px;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAAHfOtk4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4MUYyMzAwNzRBRDExMUUzOEMwM0E1RDA4QUQ4MUY2NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4MUYyMzAwODRBRDExMUUzOEMwM0E1RDA4QUQ4MUY2NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjgxRjIzMDA1NEFEMTExRTM4QzAzQTVEMDhBRDgxRjY2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjgxRjIzMDA2NEFEMTExRTM4QzAzQTVEMDhBRDgxRjY2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+MCkAsAAAA51JREFUeNpi+P//PwMUKwIxO4jNCCKAQJMBCTABsRKUfQ1Z8CmUrQWTwKb9GUAAMSBZpAZjg1SiWAIE15mQOMegtCZMcB8QW8FksVl0HSCAYIIYHkBWBHM7sqIpSAr2IckpgUxUAzKYkRQcB2J+qKcZ8LkHq/XIbmSAhis7uvtAACCA0BUKAbEYEH9GCne4tTxALIvFun9AfBOkiBHI0MDjrh9MaArUsCjiYEITYIQqPIwsyIKm6CZUQQp6kkIGIAW26PaBHA7ytji+EAWZ9I6UUAdpUEeSfAkzACCA0EMc5kNVtASADbxEdwWyYbxALMNAHriObJgaES4hBG4yQRMTNoPUoRlZDS0jHsZhmDrIZRrQcMIFQIauB+K32OIYPeWAkjcfDnlQzvsDzXkwlwZCUxgDtsRDTI4kBrxEjk11LMmXWHAXiH9hS2eKoOxFiiEwDkAAYTMMBkDliggQc0Nd/BOIP+LLLtgMI5gBgeAvEN8G4v/4DCM13B4D8Rds5YUmGREgC82GKIYpUpAkZGCJngmKOShMY6owwxRwKNiDRQwUFBOwiDPDDGPHYRjItUfQDFoLxJNxqBfCF+A2UPoIkkG+0ISKDQhgq/zRwRFo2sNnEAj8J5QUNKEGgVL9QgJq/zERMAjmNWQv4wJf8RmGHkYwA3fiUP+GqMqQ2EqFmEqTqIIROTvdpcCgfzAHwQz7BW45klnF4SqC2IBYmUhDfgDxfUKFI6ECElTiPoB6DwUABBi+YhtbC0cAitlJDAqQAz5A8T9iNBByGCgIpalQ3GEL7qfIFRuxDgM1xSUJtECoAUCWP4dWoHgdxgatWZgY6Av+QRMs1qYBtUoOSgsLlIb2YHAUiuNgNSYpjtoDbYgewdFpQq49jkHVbiXBfJBb2EEhJo2nZYyv6T0Xqf5LAuJbSA6aCy1WQE3zBDKK8E/YOsiUOJAZmqPJdRC8RcpEYQ4E1SGp0OwuBHXUO2gvlpKKjokJXyFHRFPmOLTx8AfagAiEyq2HpkF1Ms3+RU4DA+SgeQSiDD2Kk3H12HDlTFhj5ScJmtKhdZ4vtM95F0cU20BDENTRSCOxXn0HK8dADlShQtecUgDqht0B1QTIJT8jtEvBMUCO+gFtAv3HVYlTMjpCLngCHWkgqtkDcqAUDSv0f9Cm7mdy2mOwKBaE9vWZqZCG3gDxe/TuPCUtWPRBCdCABCe0qcSKFLKgkPgNLR+/g3pQJOZ6MAAA/B9HhjN0GdoAAAAASUVORK5CYII=);
+position: fixed;
+right: 20px;
+top: 20px;
+cursor: pointer;
+z-index: 1;
+font: normal 12px/38px "ProximaNova-Bold", sans-serif;
+color: #fff;
+text-transform: uppercase;
+text-indent: -64px;
+overflow: hidden;
+}
+
+.login-block {
+text-align: center;
+font: 12px/18px "Arial", sans-serif;
+width: 330px;
+margin: 90px auto 0;
+padding-bottom: 90px;
+color: #a6a6a6;
+position: relative;
+z-index: 2;
+}
+
 .social-links {
 	text-align: justify !important;
 	font-size: 0 !important;
@@ -54,11 +82,11 @@ body.modal-open {
 	margin: 0 0 10px;
 }
 
-.social-links li .fb {
+.social-links li .ig {
 	background-color: #4169bc;
 }
 
-.social-links li .fb:hover{
+.social-links li .ig:hover{
 	background-color: #365aa7;
 }
 
@@ -106,6 +134,144 @@ body.modal-open {
 	font: normal 12px/46px "ProximaNova-Bold", sans-serif;
 	letter-spacing: 1px;
 	text-decoration: none;
+}
+
+.separator {
+	text-align: center;
+	position: relative;
+	color: #c2c2c2;
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 14px;
+	overflow: hidden;
+	margin: 22px 0;
+}
+
+.separator:before {
+left: -22px;
+}
+
+.separator:before, .separator:after {
+display: block;
+content: '';
+width: 50%;
+height: 1px;
+background-color: #e5e5e5;
+position: absolute;
+top: 7px;
+}
+
+.separator:after {
+right: -22px;
+}
+
+.fields {
+margin-bottom: 20px;
+}
+
+.login-form .inputs-group {
+margin-bottom: 10px;
+}
+
+.login-form .text-input {
+position: relative;
+}
+
+.login-form input.first {
+-webkit-border-top-right-radius: 3px;
+-moz-border-top-right-radius: 3px;
+border-top-right-radius: 3px;
+-webkit-border-top-left-radius: 3px;
+-moz-border-top-left-radius: 3px;
+border-top-left-radius: 3px;
+}
+
+.login-form .text-input input {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+border: 1px solid #dbdbdb;
+font: 15px/44px "Arial", sans-serif;
+height: 44px;
+margin: 0 0 -1px 0;
+padding: 0 20px;
+position: relative;
+z-index: 1;
+width: 100%;
+color: #000;
+background-color: #f0f0f0;
+display: block;
+}
+
+.login-form .text-input {
+position: relative;
+}
+
+.login-form input.last {
+-webkit-border-bottom-right-radius: 3px;
+-moz-border-bottom-right-radius: 3px;
+border-bottom-right-radius: 3px;
+-webkit-border-bottom-left-radius: 3px;
+-moz-border-bottom-left-radius: 3px;
+border-bottom-left-radius: 3px;
+}
+
+.login-form .btn.disabled {
+background-color: #fff;
+color: #c2c2c2;
+border: 1px solid #dbdbdb;
+cursor: default;
+}
+
+.login-form a {
+color: #a6a6a6;
+text-decoration: underline;
+}
+
+.change {
+position: absolute;
+width: 100%;
+}
+
+.change {
+left: 0px;
+}
+
+.inline-btn.green {
+color: #fff !important;
+}
+
+.inline-btn {
+position: relative;
+z-index: 2;
+color: #FEFD42 !important;
+margin: 0 18px;
+text-decoration: none !important;
+}
+
+.inline-btn.green:before {
+background-color: #38a855;
+border-color: #6dbd82;
+}
+
+.inline-btn:before {
+content: '';
+display: block;
+position: absolute;
+left: -13px;
+right: -13px;
+top: -8px;
+bottom: -8px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+border: 1px solid #8D8C25;
+background-color: #1A1A1A;
+z-index: -1;
 }
 
 #header {
@@ -243,18 +409,18 @@ border-top: 1px solid #ddd;
 }
 
 .box {
-  padding: 10px;
+padding: 10px;
   display: inline-block;
   position: relative;
   margin: 1%;
   width: 28%;
   background-color: #ffffff;
--webkit-border-radius: 3px;
--moz-border-radius: 3px;
 border-radius: 3px;
--webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
--moz-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+border: 0px solid #e2e2e2;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+border-bottom: 1px solid #d5d5d5;
 }
 
 .boxInner .imgWrapper {
@@ -268,27 +434,28 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.07);
 }
 
 .titleBox {
+	padding: 10px 0 0 0;
 	font-size: 14px;
-	color: #aaa;
-	font-style: italic;
 	text-align: left;
 	font-weight: 400;
 }
 
 .titleBox .memberName {
-	color: #aaa;
-	overflow: hidden;
-	width: 194px;
-	display: inline-block;
-}
-
-.titleBox .memberName:hover {
 	color: #000000;
+	overflow: hidden;
+	border-bottom: 1px solid #ededed;
+	padding-bottom: 10px;
 }
 
-.titleBox .heartWrapper {
-	display: inline-block;
+.titleBox .memberName a {
+	color: #000000;
+	text-decoration: none;
 }
+
+.titleBox .post.post_full span {
+vertical-align: super;
+}
+
 /* Hack and hardcode for diffrent sizes of desktop version display grid */
 @media all and (min-width:1181px) {
 	.wrap {
@@ -354,397 +521,578 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.07);
 
 /* End Grid styles */
 
- @-webkit-keyframes post_poof {
-    0% {
-        opacity: 1;
-        -webkit-transform: scale(0.5);
-    }
-
-    25% {
-        opacity: 1;
-        -webkit-transform: scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        -webkit-transform: scale(1.1);
-    }
-}
-
-@-moz-keyframes post_poof {
-    0% {
-        opacity: 1;
-        -moz-transform: scale(0.5);
-    }
-
-    25% {
-        opacity: 1;
-        -moz-transform: scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        -moz-transform: scale(1.1);
-    }
-}
-@keyframes post_poof {
-    0% {
-        opacity: 1;
-        transform: scale(0.5);
-    }
-
-    25% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(1.1);
-    }
-}
-
-@-webkit-keyframes like_poof {
-    0% {
-        opacity: 1;
-        -webkit-transform: rotate(0deg);
-    }
-
-    25% {
-        opacity: 1;
-        -webkit-transform: rotate(-20deg);
-    }
-
-    75% {
-        -webkit-transform: rotate(20deg);
-    }
-
-    100% {
-        margin-top: -80px;
-        opacity: 0;
-        -webkit-transform: rotate(0deg);
-    }
-}
-
-@-moz-keyframes like_poof {
-    0% {
-        opacity: 1;
-        -moz-transform: rotate(0deg);
-    }
-
-    25% {
-        opacity: 1;
-        -moz-transform: rotate(-20deg);
-    }
-
-    75% {
-        -moz-transform: rotate(20deg);
-    }
-
-    100% {
-        margin-top: -80px;
-        opacity: 0;
-        -moz-transform: rotate(0deg);
-    }
-}
-@keyframes like_poof {
-    0% {
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-
-    25% {
-        opacity: 1;
-        transform: rotate(-20deg);
-    }
-
-    75% {
-        transform: rotate(20deg);
-    }
-
-    100% {
-        margin-top: -80px;
-        opacity: 0;
-        transform: rotate(0deg);
-    }
-}
-
-@-webkit-keyframes unlike_heartbreak_left {
-    0% {
-        margin-top: -36px;
-        opacity: 1;
-        -webkit-transform: rotate(0deg);
-    }
-
-    30% {
-        margin-top: -36px;
-        opacity: 1;
-    }
-
-    80% {
-        margin-top: 0;
-        opacity: 0;
-        -webkit-transform: rotate(-15deg);
-    }
-
-    100% {
-        margin-top: 0;
-        opacity: 0;
-        -webkit-transform: rotate(-15deg);
-    }
-}
-
-@-moz-keyframes unlike_heartbreak_left {
-    0% {
-        margin-top: -36px;
-        opacity: 1;
-        -moz-transform: rotate(0deg);
-    }
-
-    30% {
-        margin-top: -36px;
-        opacity: 1;
-    }
-
-    80% {
-        margin-top: 0;
-        opacity: 0;
-        -moz-transform: rotate(-15deg);
-    }
-
-    100% {
-        margin-top: 0;
-        opacity: 0;
-        -moz-transform: rotate(-15deg);
-    }
-}
-@keyframes unlike_heartbreak_left {
-    0% {
-        margin-top: -36px;
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-
-    30% {
-        margin-top: -36px;
-        opacity: 1;
-    }
-
-    80% {
-        margin-top: 0;
-        opacity: 0;
-        transform: rotate(-15deg);
-    }
-
-    100% {
-        margin-top: 0;
-        opacity: 0;
-        transform: rotate(-15deg);
-    }
-}
-
-@-webkit-keyframes unlike_heartbreak_right {
-    0% {
-        margin-top: -36px;
-        opacity: 1;
-        -webkit-transform: rotate(0deg);
-    }
-
-    30% {
-        margin-top: -36px;
-        opacity: 1;
-    }
-
-    80% {
-        margin-top: 0;
-        opacity: 0;
-        -webkit-transform: rotate(15deg);
-    }
-
-    100% {
-        margin-top: 0;
-        opacity: 0;
-        -webkit-transform: rotate(15deg);
-    }
-}
-
-@-moz-keyframes unlike_heartbreak_right {
-    0% {
-        margin-top: -36px;
-        opacity: 1;
-        -moz-transform: rotate(0deg);
-    }
-
-    30% {
-        margin-top: -36px;
-        opacity: 1;
-    }
-
-    80% {
-        margin-top: 0;
-        opacity: 0;
-        -moz-transform: rotate(15deg);
-    }
-
-    100% {
-        margin-top: 0;
-        opacity: 0;
-        -moz-transform: rotate(15deg);
-    }
-}
-@keyframes unlike_heartbreak_right {
-    0% {
-        margin-top: -36px;
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-
-    30% {
-        margin-top: -36px;
-        opacity: 1;
-    }
-
-    80% {
-        margin-top: 0;
-        opacity: 0;
-        transform: rotate(15deg);
-    }
-
-    100% {
-        margin-top: 0;
-        opacity: 0;
-        transform: rotate(15deg);
-    }
-}
-.post_full {
-	display: inline-block;
-	width: 35px;
-	height: 30px;
-    font-size: 14px;
-}
-.post_full .poof {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 100;
-    display: block;
-    margin: -27px 0 0 -27px;
-    width: 54px;
-    height: 54px;
-    background: url('http://pic.yupoo.com/reicky_v/DaDzQfuC/medium.jpg') no-repeat;
-    -webkit-transform-origin: 50% 50%;
-    -moz-transform-origin: 50% 50%;
-    -o-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    -webkit-animation: post_poof .6s ease-out;
-    -moz-animation: post_poof .6s ease-out;
-    -ms-animation: post_poof .6s ease-out;
-    -o-animation: post_poof .6s ease-out;
-    animation: post_poof .6s ease-out;
-    -ms-transform-origin: 50% 50%;
-}
+/* Heart animation*/
 .post_full .post_control {
-	font-size: 18px;
-    color: #C0C0C0;
-    position: relative;
-    display: inline-block;
-    margin: 10px 0 10px 12px;
-    width: 25px;
-    height: 25px;
-    text-align: left;
-    cursor: pointer;
+	text-align:left;
+	display:inline-block;
+	position:relative;
+	height:25px;
+	width:25px;
 }
 
 .post_full .post_control:after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    visibility: visible;
-    margin: -12px 0 0 -12px;
-    width: 33px;
-    height: 24px;
-
-    content: '';
-    opacity: .65;
+	content:'';
+	position:absolute;
+	top:50%;
+	left:50%;
+	height:24px;
+	width:24px;
+	margin:-12px 0 0 -12px;
+	background:url(http://assets.tumblr.com/images/dashboard_master_sprite.png?b4fdf87b377e8617517587ca626d3c81) no-repeat;
+	opacity:.31;
+	visibility:visible;
 }
+
+.post_full .post_control:first-child {
+	margin-left:0;
+}
+
+.post_full .post_control:hover:after,.post_full .post_control.active:after {
+	opacity:.41;
+}
+
+.post_full .post_control.no_icon,.post_full .post_control.no_icon.show_label {
+	width:auto;
+	vertical-align:top;
+	padding-left:5px;
+}
+
+.post_full .post_control.no_icon:hover {
+	color:rgba(130,139,152,0.9);
+}
+
+
+
+.post_full .post_control.no_icon:after {
+	display:none;
+}
+
+.post_full .post_control.disabled {
+	cursor:default;
+}
+
+.post_full .post_control.disabled:after {
+	opacity:.3;
+}
+
 .post_full .post_control.like:after {
-    background-position: 0 -133px;
-}
-
-.post_full .post_control.like.liked {
-	color: #f66!important;
+	background-position:-497px -212px;
 }
 
 .post_full .post_control.like.liked:after {
-    background-position: 0 -164px;
-    opacity: 1;
+	background-position:-526px -212px;
+	opacity:1;
 }
-.post_full .post_control .poof {
-    top: -27px;
+
+
+
+
+
+
+.post_full .post_poof {
+	background:url(http://assets.tumblr.com/images/dashboard_master_sprite.png?b4fdf87b377e8617517587ca626d3c81) no-repeat;
+	display:block;
+	height:54px;
+	left:50%;
+	margin:-27px 0 0 -27px;
+	position:absolute;
+	top:50%;
+	width:54px;
+	z-index:100;
+	-webkit-animation:post_poof .6s ease-out;
+	-moz-animation:post_poof .6s ease-out;
+	-ms-animation:post_poof .6s ease-out;
+	-o-animation:post_poof .6s ease-out;
+	animation:post_poof .6s ease-out;
+	-webkit-transform-origin:50% 50%;
+	-moz-transform-origin:50% 50%;
+	-ms-transform-origin:50% 50%;
+	-o-transform-origin:50% 50%;
+	transform-origin:50% 50%;
 }
+
+.post_full .post_control .post_poof {
+	top:-27px;
+}
+
+
+
 .post_full .post_animated_heart {
-    background: url('http://pic.yupoo.com/reicky_v/DaDzQfuC/medium.jpg') no-repeat 0 -66px;
-    -webkit-animation: like_poof .6s ease-out;
-    -moz-animation: like_poof .6s ease-out;
-    animation: like_poof .6s ease-out;
+	background-position:0 -420px;
+	-webkit-animation:like_poof .6s ease-out;
+	-moz-animation:like_poof .6s ease-out;
+	-ms-animation:like_poof .6s ease-out;
+	-o-animation:like_poof .6s ease-out;
+	animation:like_poof .6s ease-out;
 }
 
 .post_full .post_animated_heart span {
-    display: none;
-}
-.post_full .unlike .post_animated_heart span {
-    display:block;
-}
-.post_full .unlike .post_animated_heart {
-    background: transparent;
-    -webkit-animation: none;
-    -moz-animation: none;
-    -ms-animation: none;
-    -o-animation: none;
-    animation: none;
+	display:none;
 }
 
-.post_full .unlike .post_animated_heart span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    display: block;
-    margin-left: 3px;
-    height: 100%;
-    background: url('http://pic.yupoo.com/reicky_v/DaDzQfuC/medium.jpg') no-repeat;
+.post_full .post_animated_heart.unliked {
+	background:transparent;
+	-webkit-animation:none;
+	-moz-animation:none;
+	-ms-animation:none;
+	-o-animation:none;
+	animation:none;
 }
 
-.post_full .unlike .post_animated_heart span.heart_left {
-    margin-left: -29px;
-    width: 29px;
-    height:48px;
-    background-position: 0 -6px;
-    -webkit-transform-origin: 26px 54px;
-    -moz-transform-origin: 26px 54px;
-    -o-transform-origin: 26px 54px;
-    transform-origin: 26px 54px;
-    -ms-transform-origin: 26px 54px;
-    -webkit-animation: unlike_heartbreak_left .6s ease-out;
-    -moz-animation: unlike_heartbreak_left .6s ease-out;
-    -ms-animation: unlike_heartbreak_left .6s ease-out;
-    -o-animation: unlike_heartbreak_left .6s ease-out;
-    animation: unlike_heartbreak_left .6s ease-out;
+.post_full .post_animated_heart.unliked span {
+	background:url(http://assets.tumblr.com/images/dashboard_master_sprite.png?b4fdf87b377e8617517587ca626d3c81) no-repeat;
+	display:block;
+	height:100%;
+	left:50%;
+	margin-left:3px;
+	position:absolute;
+	top:0;
 }
 
-.post_full .unlike .post_animated_heart span.heart_right {
-    width: 29px;
-    height:48px;
-    background-position: -29px -6px;
-    -webkit-transform-origin: 0 54px;
-    -moz-transform-origin: 0 54px;
-    -o-transform-origin: 0 54px;
-    transform-origin: 0 54px;
-    -ms-transform-origin: 0 54px;
-    -webkit-animation: unlike_heartbreak_right .6s ease-out;
-    -moz-animation: unlike_heartbreak_right .6s ease-out;
-    -ms-animation: unlike_heartbreak_right .6s ease-out;
-    -o-animation: unlike_heartbreak_right .6s ease-out;
-    animation: unlike_heartbreak_right .6s ease-out;
+.post_full .post_animated_heart.unliked span.heart_left {
+	background-position:0 -360px;
+	margin-left:-29px;
+	width:26px;
+	-webkit-transform-origin:26px 54px;
+	-moz-transform-origin:26px 54px;
+	-ms-transform-origin:26px 54px;
+	-o-transform-origin:26px 54px;
+	transform-origin:26px 54px;
+	-webkit-animation:unlike_heartbreak_left .6s ease-out;
+	-moz-animation:unlike_heartbreak_left .6s ease-out;
+	-ms-animation:unlike_heartbreak_left .6s ease-out;
+	-o-animation:unlike_heartbreak_left .6s ease-out;
+	animation:unlike_heartbreak_left .6s ease-out;
+}
+
+.post_full .post_animated_heart.unliked span.heart_right {
+	background-position:-29px -360px;
+	width:29px;
+	-webkit-transform-origin:0 54px;
+	-moz-transform-origin:0 54px;
+	-ms-transform-origin:0 54px;
+	-o-transform-origin:0 54px;
+	transform-origin:0 54px;
+	-webkit-animation:unlike_heartbreak_right .6s ease-out;
+	-moz-animation:unlike_heartbreak_right .6s ease-out;
+	-ms-animation:unlike_heartbreak_right .6s ease-out;
+	-o-animation:unlike_heartbreak_right .6s ease-out;
+	animation:unlike_heartbreak_right .6s ease-out;
+}
+
+#posts.posts {
+	list-style-type:none;
+	width: 100%;
+	text-align:center;
+	vertical-align:middle;
+	margin:100px auto;
+}
+
+#posts.posts>.post_container {
+	margin:0 0 20px;
+}
+
+#posts.posts>li:last-child {
+	margin:0;
+}
+
+
+#posts.posts .post {
+	clear:both;
+}
+
+.post.post_full {
+	display: inline-block;
+	float: right;
+	margin-top: 5px;
+}
+
+.place {
+	display: inline-block;
+	margin-top: 13px;
+}
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio:2),only screen and (-moz-min-device-pixel-ratio:2),only screen and (-o-min-device-pixel-ratio:21),only screen and (min-device-pixel-ratio:2),only screen and (min-resolution:192dpi),only screen and (min-resolution:2dppx) {
+	.post_full .post_info .reblog_icon,.post_full .post_avatar:after,.post_full .post_control:after,.post_full .post_animated_heart,.post_full .post_animated_heart.unliked span,.post_full .post_info .private_label:after,.post_full .post_avatar.show_user_menu .post_avatar_link:after,.share_options a:before,#posts .post .post_controls .photo_reply_placeholder,#posts .post .post_control.photo_reply .photo_reply_icon_base {
+		background-image:url(http://assets.tumblr.com/images/dashboard_master_sprite_2x.png?40bb91af2f67599b07b50eec80abbce0);
+		background-size:972px 471px;
+	}
+	
+	#blog_url_arrow {
+		background-image:url(http://assets.tumblr.com/images/dashboard_controls/dashboard_controls_sprite_2x.png?88071ca3ddca81e36c2e1d38adb26dd4);
+		background-size:473px 2700px;
+	}
+	
+	.post.post_full .post_permalink {
+		background-image:url(http://assets.tumblr.com/images/posts/dogear_2x.png?2);
+		background-size:23px 23px;
+	}
+	
+	.post_full .post_answer_avatar:after {
+		background-image:url(http://assets.tumblr.com/images/post_answer_input_nipple_2x.png?bb6c2103d074ea5e4b1265e0fab95b1e);
+		background-size:30px 20px;
+	}
+}
+@-webkit-keyframes like_poof {
+	0% {
+		opacity:1;
+		-webkit-transform:rotate(0deg);
+	}
+	
+	25% {
+		opacity:1;
+		-webkit-transform:rotate(-20deg);
+	}
+	
+	75% {
+		-webkit-transform:rotate(20deg);
+	}
+	
+	100% {
+		margin-top:-80px;
+		opacity:0;
+		-webkit-transform:rotate(0deg);
+	}
+}
+
+@-moz-keyframes like_poof {
+	0% {
+		opacity:1;
+		-moz-transform:rotate(0deg);
+	}
+	
+	25% {
+		opacity:1;
+		-moz-transform:rotate(-20deg);
+	}
+	
+	75% {
+		-moz-transform:rotate(20deg);
+	}
+	
+	100% {
+		margin-top:-80px;
+		opacity:0;
+		-moz-transform:rotate(0deg);
+	}
+}
+
+@-ms-keyframes like_poof {
+	0% {
+		opacity:1;
+		-ms-transform:rotate(0deg);
+	}
+	
+	25% {
+		opacity:1;
+		-ms-transform:rotate(-20deg);
+	}
+	
+	75% {
+		-ms-transform:rotate(20deg);
+	}
+	
+	100% {
+		margin-top:-80px;
+		opacity:0;
+		-ms-transform:rotate(0deg);
+	}
+}
+
+@-o-keyframes like_poof {
+	0% {
+		opacity:1;
+		-o-transform:rotate(0deg);
+	}
+	
+	25% {
+		opacity:1;
+		-o-transform:rotate(-20deg);
+	}
+	
+	75% {
+		-o-transform:rotate(20deg);
+	}
+	
+	100% {
+		margin-top:-80px;
+		opacity:0;
+		-o-transform:rotate(0deg);
+	}
+}
+
+@keyframes like_poof {
+	0% {
+		opacity:1;
+		transform:rotate(0deg);
+	}
+	
+	25% {
+		opacity:1;
+		transform:rotate(-20deg);
+	}
+	
+	75% {
+		transform:rotate(20deg);
+	}
+	
+	100% {
+		margin-top:-80px;
+		opacity:0;
+		transform:rotate(0deg);
+	}
+}
+
+@-webkit-keyframes unlike_heartbreak_left {
+	0% {
+		opacity:1;
+		margin-top:-36px;
+		-webkit-transform:rotate(0deg);
+	}
+	
+	30% {
+		opacity:1;
+		margin-top:-36px;
+	}
+	
+	80% {
+		opacity:0;
+		margin-top:0;
+		-webkit-transform:rotate(-15deg);
+	}
+	
+	100% {
+		opacity:0;
+		margin-top:0;
+		-webkit-transform:rotate(-15deg);
+	}
+}
+
+@-moz-keyframes unlike_heartbreak_left {
+	0% {
+		opacity:1;
+		margin-top:-36px;
+		-moz-transform:rotate(0deg);
+	}
+	
+	30% {
+		opacity:1;
+		margin-top:-36px;
+	}
+	
+	80% {
+		opacity:0;
+		margin-top:0;
+		-moz-transform:rotate(-15deg);
+	}
+	
+	100% {
+		opacity:0;
+		margin-top:0;
+		-moz-transform:rotate(-15deg);
+	}
+}
+
+@-ms-keyframes unlike_heartbreak_left {
+	0% {
+		opacity:1;
+		margin-top:-36px;
+		-ms-transform:rotate(0deg);
+	}
+	
+	30% {
+		opacity:1;
+		margin-top:-36px;
+	}
+	
+	80% {
+		opacity:0;
+		margin-top:0;
+		-ms-transform:rotate(-15deg);
+	}
+	
+	100% {
+		opacity:0;
+		margin-top:0;
+		-ms-transform:rotate(-15deg);
+	}
+}
+
+@-o-keyframes unlike_heartbreak_left {
+	0% {
+		opacity:1;
+		margin-top:-36px;
+		-o-transform:rotate(0deg);
+	}
+	
+	30% {
+		opacity:1;
+		margin-top:-36px;
+	}
+	
+	80% {
+		opacity:0;
+		margin-top:0;
+		-o-transform:rotate(-15deg);
+	}
+	
+	100% {
+		opacity:0;
+		margin-top:0;
+		-o-transform:rotate(-15deg);
+	}
+}
+
+@keyframes unlike_heartbreak_left {
+	0% {
+		opacity:1;
+		margin-top:-36px;
+		transform:rotate(0deg);
+	}
+	
+	30% {
+		opacity:1;
+		margin-top:-36px;
+	}
+	
+	80% {
+		opacity:0;
+		margin-top:0;
+		transform:rotate(-15deg);
+	}
+	
+	100% {
+		opacity:0;
+		margin-top:0;
+		transform:rotate(-15deg);
+	}
+}
+
+@-webkit-keyframes unlike_heartbreak_right {
+	0% {
+		opacity:1;
+		margin-top:-36px;
+		-webkit-transform:rotate(0deg);
+	}
+	
+	30% {
+		opacity:1;
+		margin-top:-36px;
+	}
+	
+	80% {
+		opacity:0;
+		margin-top:0;
+		-webkit-transform:rotate(15deg);
+	}
+	
+	100% {
+		opacity:0;
+		margin-top:0;
+		-webkit-transform:rotate(15deg);
+	}
+}
+
+@-moz-keyframes unlike_heartbreak_right {
+	0% {
+		opacity:1;
+		margin-top:-36px;
+		-moz-transform:rotate(0deg);
+	}
+	
+	30% {
+		opacity:1;
+		margin-top:-36px;
+	}
+	
+	80% {
+		opacity:0;
+		margin-top:0;
+		-moz-transform:rotate(15deg);
+	}
+	
+	100% {
+		opacity:0;
+		margin-top:0;
+		-moz-transform:rotate(15deg);
+	}
+}
+
+@-ms-keyframes unlike_heartbreak_right {
+	0% {
+		opacity:1;
+		margin-top:-36px;
+		-ms-transform:rotate(0deg);
+	}
+	
+	30% {
+		opacity:1;
+		margin-top:-36px;
+	}
+	
+	80% {
+		opacity:0;
+		margin-top:0;
+		-ms-transform:rotate(15deg);
+	}
+	
+	100% {
+		opacity:0;
+		margin-top:0;
+		-ms-transform:rotate(15deg);
+	}
+}
+
+@-o-keyframes unlike_heartbreak_right {
+	0% {
+		opacity:1;
+		margin-top:-36px;
+		-o-transform:rotate(0deg);
+	}
+	
+	30% {
+		opacity:1;
+		margin-top:-36px;
+	}
+	
+	80% {
+		opacity:0;
+		margin-top:0;
+		-o-transform:rotate(15deg);
+	}
+	
+	100% {
+		opacity:0;
+		margin-top:0;
+		-o-transform:rotate(15deg);
+	}
+}
+
+@keyframes unlike_heartbreak_right {
+	0% {
+		opacity:1;
+		margin-top:-36px;
+		transform:rotate(0deg);
+	}
+	
+	30% {
+		opacity:1;
+		margin-top:-36px;
+	}
+	
+	80% {
+		opacity:0;
+		margin-top:0;
+		transform:rotate(15deg);
+	}
+	
+	100% {
+		opacity:0;
+		margin-top:0;
+		transform:rotate(15deg);
+	}
 }
 
 /* End heart animation browsers styles */
