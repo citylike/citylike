@@ -101,7 +101,7 @@ class City_Like_Project
 		return false;
 	}
 	
-	private function addUser($user_name $first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network)
+	private function addUser($user_name, $first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network)
 	{
 		if ($this->isAuth()) return;
 	
@@ -156,7 +156,7 @@ class City_Like_Project
 						$sex = $user_data['sex'];
 						$network = 'vk';
 						
-						$this->addUser($first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network)
+						$this->addUser($user_name, $first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network);
 						
 						header("Location:index.php");
 					}
@@ -205,7 +205,7 @@ class City_Like_Project
 			$sex = '';
 			$network = 'ig';
 			
-			$this->addUser($first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network)
+			$this->addUser($user_name, $first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network);
 						
 			header("Location:index.php");
 		}
