@@ -180,7 +180,8 @@ class City_Like_Project
 					'code'                     =>     $code
 			);
 			$curl = curl_init($url);    // we init curl by passing the url
-			curl_setopt($curl,CURLOPT_POST,true);   // to send a POST request
+			if ($curl) echo 1;
+ 			curl_setopt($curl,CURLOPT_POST,true);   // to send a POST request
 			curl_setopt($curl,CURLOPT_POSTFIELDS,$access_token_parameters);   // indicate the data to send
 			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);   // to return the transfer as a string of the return value of curl_exec() instead of outputting it out directly.
 			curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);   // to stop cURL from verifying the peer's certificate.
