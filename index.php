@@ -5,13 +5,8 @@
 
 class City_Like_Project 
 {
-	private $DB_host = '109.120.150.218';
-	private $DB_username = 'root';
-	private $DB_password = 'opensky24ilovephp1';
+	require ('config.php');
 	
-	//private $DB_host = 'localhost';
-	//private $DB_username = 'root';
-	//private $DB_password = '';
 	private $city_salt = '613152196cb8a9243d5ef9d751bdc0e4';
 
 	public function __construct()
