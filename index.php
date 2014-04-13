@@ -101,7 +101,7 @@ class City_Like_Project
 		return false;
 	}
 	
-	private function addUser($first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network)
+	private function addUser($user_name $first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network)
 	{
 		if ($this->isAuth()) return;
 	
@@ -119,8 +119,8 @@ class City_Like_Project
 		$session_id = md5($this->city_salt.$network.$network_id);
 		
 		$query = "INSERT INTO users ".
-				 "(first_name, last_name, birth_date, network_avatar, network_id, sex, network, session_id, registration_date ) ".
-				 "VALUES ( '$first_name', '$last_name', '$birth_day', '$network_avatar', '$network_id', '$sex', '$network', '$session_id', '27.30.30' )";
+				 "(user_name first_name, last_name, birth_date, network_avatar, network_id, sex, network, session_id, registration_date ) ".
+				 "VALUES ('$user_name', '$first_name', '$last_name', '$birth_day', '$network_avatar', '$network_id', '$sex', '$network', '$session_id', '27.30.30' )";
 		
 		$sql = mysql_query($query ,$link);
 		
@@ -147,6 +147,7 @@ class City_Like_Project
 					if (isset($_POST['user_data'])) {
 						$user_data = $_POST['user_data'];
 						
+						$user_name = '';
 						$first_name = $user_data['first_name'];
 						$last_name = $user_data['last_name'];
 						$birth_day = $user_data['bdate'];
@@ -155,7 +156,9 @@ class City_Like_Project
 						$sex = $user_data['sex'];
 						$network = 'vk';
 						
-						exit ($this->addUser($first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network));
+						$this->addUser($first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network)
+						
+						header("Location:index.php");
 					}
 					break;
 				case 'email':
@@ -191,9 +194,20 @@ class City_Like_Project
 			$result = curl_exec($curl);   // to perform the curl session
 			curl_close($curl);   // to close the curl session
 
-			$arr = json_decode($result,true);
+			$user_data = json_decode($result,true);
 
-			var_dump($arr);
+			$user_name = $user_data['user']['username'];
+			$first_name = $user_data['user']['full_name'];
+			$last_name = '';
+			$birth_day = '';
+			$network_avatar = $user_data['user']['photo_small'];
+			$network_id = (string)$user_data['user']['id'];
+			$sex = '';
+			$network = 'ig';
+			
+			$this->addUser($first_name, $last_name, $birth_day, $network_avatar, $network_id, $sex, $network)
+						
+			header("Location:index.php");
 		}
 	}
 }
