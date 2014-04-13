@@ -119,7 +119,7 @@ class City_Like_Project
 		$session_id = md5($this->city_salt.$network.$network_id);
 		
 		$query = "INSERT INTO users ".
-				 "(user_name first_name, last_name, birth_date, network_avatar, network_id, sex, network, session_id, registration_date ) ".
+				 "(user_name, first_name, last_name, birth_date, network_avatar, network_id, sex, network, session_id, registration_date ) ".
 				 "VALUES ('$user_name', '$first_name', '$last_name', '$birth_day', '$network_avatar', '$network_id', '$sex', '$network', '$session_id', '27.30.30' )";
 		
 		$sql = mysql_query($query ,$link);

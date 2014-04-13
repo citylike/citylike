@@ -383,6 +383,7 @@ input::-webkit-input-placeholder {
 }
 
 .net_avatar {
+	width: 50px;
 	border: 2px solid #fff;
 	border-radius: 50%;
 }
