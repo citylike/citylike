@@ -181,7 +181,7 @@ class City_Like_Project
 		mysql_query("SET NAMES 'utf8'"); 
 		mysql_query("SET CHARACTER SET 'utf8'");
 		
-		$sql = mysql_query("SELECT * FROM users WHERE user_name='$login_name' AND password='$password'", $link);
+		$sql = mysql_query("SELECT * FROM users WHERE user_name='$login_name' AND password='$password' OR email='$login_name' AND password='$password'", $link);
 		
 		$result = mysql_fetch_assoc($sql);
 		
