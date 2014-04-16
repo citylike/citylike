@@ -10,17 +10,6 @@ $("div.like").click(function(){
     })
 });
 
-$("#switch_registration_form").click(function() {
-    $("#login-modal").modal('hide');
-    $("#registration-modal").modal('show');
-});
-
-$("#switch_login_form").click(function() {
-    $("#registration-modal").modal('hide');
-    $("#login-modal").modal('show');
-});
-
-
 function preventSelection(element){
   var preventSelection = false;
 

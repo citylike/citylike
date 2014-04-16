@@ -5,7 +5,8 @@
 
 	<!-- Enable responsive view on mobile devices -->
 
-	<link rel="stylesheet" href="assets/styles/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/styles/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/styles/lib/animate.min.css">
 	<link rel="stylesheet" href="assets/styles/style.css">
 	<link rel="stylesheet" href="fontello/css/fontello.css">
 
