@@ -62,7 +62,7 @@ class City_Like_Project
 		mysql_query("SET CHARACTER SET 'utf8'"); 
 		
 		// select users only with participate 1!
-		$sql = mysql_query("SELECT * FROM members" ,$link);
+		$sql = mysql_query("SELECT * FROM members ORDER BY RAND()" ,$link);
 		
 		while($row = mysql_fetch_assoc($sql)){
 			 $result[] = $row;
@@ -166,6 +166,36 @@ class City_Like_Project
 		return $sql;
 	}
 	
+	private function addMember($first_name, $last_name, $permalink, $image)
+	{
+		$user_info = $this->isAuth();
+		
+		if (! $user_info) return;
+		
+		$user_id = $user_info['id_user'];
+	
+		$link = mysql_connect($this->DB_host, $this->DB_username, $this->DB_password);
+		
+		if (!$link) {
+			return false;
+		}
+		
+		mysql_select_db("city_like" ,$link);
+		
+		mysql_query("SET NAMES 'utf8'"); 
+		mysql_query("SET CHARACTER SET 'utf8'");
+		
+		$query = "INSERT INTO members ".
+				 "(id_user, first_name, last_name, photo, permalink, votes) ".
+				 "VALUES ('$user_id', '$first_name', '$last_name', '$image', '$permalink', '10')";
+		
+		$sql = mysql_query($query ,$link);
+		
+		mysql_close($link);
+		
+		return $sql;
+	}
+	
 	private function loginUser($login_name, $password)
 	{	
 		if ($this->isAuth()) return;
@@ -196,6 +226,93 @@ class City_Like_Project
 	
 	public function route()
 	{
+		if (isset($_GET['upload']) && $_GET['upload'] == true) {
+			if (isset($_FILES['file'])) {
+			
+				$types = array('image/png', 'image/jpeg');
+			
+				if (!in_array($_FILES['file']['type'], $types)) exit('error_type');
+
+				if ($_FILES['file']['size'] > 1024*3*1024) exit('error_size');
+				
+				$path = self::sanitizeTextField($_FILES['file']['name']);
+				$ext = pathinfo($path, PATHINFO_EXTENSION);
+				
+				$update_filename = time().".".$ext;
+				
+				move_uploaded_file($_FILES["file"]["tmp_name"], 'upload_dir/' . $update_filename);
+				exit($update_filename);
+			}
+		}
+		
+		if (isset($_GET['crop']) && $_GET['crop'] == true) {
+			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+				$src = 'upload_dir/'.self::sanitizeTextField($_POST['src']);
+				$coor_x = intval($_POST['x']);
+				$coor_y = intval($_POST['y']);
+				$coor_w = intval($_POST['w']);
+				$coor_h = intval($_POST['h']);
+				$ext = pathinfo($src, PATHINFO_EXTENSION);
+				$update_filename = time().".".$ext;
+				$upload_folder = 'images/squareform/';
+				
+				switch ($ext) {
+					case 'jpeg':
+						$targ_w = $targ_h = 270; 
+						$jpeg_quality = 98;
+						$img_r = imagecreatefromjpeg($src); 
+						$dst_r = ImageCreateTrueColor( $targ_w, $targ_h ); 
+						imagecopyresampled($dst_r, $img_r, 0, 0, $coor_x, $coor_y, $targ_w, $targ_h, $coor_w, $coor_h);
+						header('Content-type: image/jpeg'); 
+						imagejpeg($dst_r,$upload_folder.$update_filename, $jpeg_quality); 
+						echo $upload_folder.$update_filename; 
+						exit;
+					break;
+					case 'jpg':
+						$targ_w = $targ_h = 270; 
+						$jpeg_quality = 98;
+						$img_r = imagecreatefromjpeg($src); 
+						$dst_r = ImageCreateTrueColor( $targ_w, $targ_h ); 
+						imagecopyresampled($dst_r, $img_r, 0, 0, $coor_x, $coor_y, $targ_w, $targ_h, $coor_w, $coor_h);
+						header('Content-type: image/jpeg'); 
+						imagejpeg($dst_r,$upload_folder.$update_filename, $jpeg_quality); 
+						echo $upload_folder.$update_filename; 
+						exit;
+					break;
+					case 'png':
+						$targ_w = $targ_h = 270; 
+						$img_r = imagecreatefrompng($src); 
+						$dst_r = ImageCreateTrueColor( $targ_w, $targ_h ); 
+						imagecopyresampled($dst_r, $img_r, 0, 0, $coor_x, $coor_y, $targ_w, $targ_h, $coor_w, $coor_h);
+						header('Content-type: image/png'); 
+						imagepng($dst_r,$upload_folder.$update_filename); 
+						echo $upload_folder.$update_filename; 
+						exit;
+					break;
+				}
+			}
+		}
+		
+		if (isset($_GET['participate']) && $_GET['participate'] == true) {
+			if (isset($_POST['member'])) {
+				$member_data = $_POST['member'];
+
+				$first_name = self::sanitizeTextField($member_data['first_name']);
+				$last_name = self::sanitizeTextField($member_data['last_name']);
+				$permalink = self::sanitizeTextField($member_data['permalink']);
+				$image = self::sanitizeTextField($member_data['image']);
+
+				$success = $this->addMember($first_name, $last_name, $permalink, $image);
+				if (!$success) exit("error");
+				$member_info = array();
+				$member_info['first_name'] = $first_name;
+				$member_info['last_name'] = $last_name;
+				$member_info['permalink'] = $permalink;
+				$member_info['image'] = $image;
+				exit(json_encode($member_info));
+			}
+		}
+		
 		if (! isset ($_GET['authorization']) && ! isset ($_GET['code'])) return false;
 		
 		if (isset ($_GET['authorization'])) {
@@ -297,7 +414,6 @@ class City_Like_Project
 					break;
 			}
 		}
-
 		
 		// Instagram auth, we can't recieve token ajax or another ways
 		if($_GET['code']) {
@@ -340,8 +456,8 @@ class City_Like_Project
 	static public function sanitizeTextField($str, $trim = true){
 		if ($trim === true) $str = trim($str);
         $str = strip_tags($str);
-        $str = stripslashes($str);
         $str = mysql_real_escape_string($str);
+		$str = strtolower($str);
         return $str;
 	}
 }

@@ -36,6 +36,9 @@
 			<button type="button" class="btn btn-default">ТОП 5</button>
 			<button type="button" class="btn btn-default">По дате</button>
 			<button type="button" class="btn btn-default">По популярности</button>
+			<?php if ($user_info && !isset($user_info['part_id'])): ?>
+			<a class="modal-switch" href="#participate-modal"><button type="button" class="btn btn-default">Участвовать</button></a>
+			<?php endif; ?>
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -196,6 +199,61 @@
 		<div class="change">
 			Уже регистрировались? 
 			<a href="#login-modal" id="switch_login_form" class="inline-btn green modal-switch">Вход</a>
+		</div>
+	</div>
+</div>
+<div id="participate-modal" class="cstm-modal">
+	<i class="close_login">Закрыть</i>
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<h4 class="modal-title">Участвовать</h4>
+			</div>
+			
+			<div class="modal-body">
+				<div class="row">
+					<div class="upload-block">
+						<p>Добро пожаловать на конкурс City-Like! Для того, чтобы стать участнице и выиграть диадему, загрузите Ваше фото</p>
+						<button id="UploadButton" type="button" class="btn btn-default">Загрузить фото</button>
+					</div>
+					<div id="cropBox"></div>
+					<div id="participate-share">
+						<div class="cropped_member_image col-md-4">
+							<img class="member_image" src="" />
+						</div>
+						<form method="POST" id="participate-member-start">
+						<div class="form-field">
+							<fieldset class="user_name">
+								<label for="user_name">Имя</label>
+								<input name="member[first_name]" placeholder="Ирина" value="Ирина" size="30" type="text">
+							</fieldset>
+							<p class="message">Имя которое будет отображаться на Вашей карточке</p>
+						</div>
+						
+						<div class="form-field">
+							<fieldset class="user_name">
+								<label for="user_name">Фамилия</label>
+								<input name="member[last_name]" placeholder="Волгодончанская" value="Волгодончанская" size="30" type="text">
+							</fieldset>
+							<p class="message">Фамилия которая будет отображаться на Вашей карточке</p>
+						</div>
+						
+						<div class="form-field">
+							<fieldset class="user_name">
+								<label for="user_name">Ссылка</label>
+								<input name="member[permalink]" placeholder="IrinaVoldonchanskaya" value="IrinaVoldonchanskaya" size="30" type="text">
+								<input type="hidden" id="member_image" name="member[image]" value="">
+							</fieldset>
+							<p class="message">Ссылка на Вашу персональный профиль</p>
+						</div>
+						
+						<input id="submit-share" type="submit" value="Участвовать">
+							
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
