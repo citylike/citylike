@@ -26,4 +26,4 @@
 	<![endif]-->
 </head>
 
-<body>
+<body class="noselect">

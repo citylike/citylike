@@ -1,9 +1,15 @@
 $(document).ready(function(){
 var count = true;
-$("div.like").click(function(){
-  var heart = $('<div class="post_animated_heart post_poof"><span class="heart_left"></span><span class="heart_right"></span></div>').toggleClass("unliked", count = !count);
+$("body").on("click", "div.like", function(){
+
+	if ($(this).hasClass("liked")) {
+		var heart = $('<div class="post_animated_heart post_poof"><span class="heart_left"></span><span class="heart_right"></span></div>').addClass("unliked");
+
+	} else {
+		var heart = $('<div class="post_animated_heart post_poof"><span class="heart_left"></span><span class="heart_right"></span></div>').removeClass("unliked");
+	}
   
-  $(this).toggleClass("liked").append(heart);
+	$(this).toggleClass("liked").append(heart);
   
     heart.fadeOut(400, function() {
       heart.remove()

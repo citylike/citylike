@@ -86,7 +86,7 @@
 		});
 		
 		modal.mousedown(function (e){
-			if (!modalConteiner.is(e.target) && modalConteiner.has(e.target).length === 0){
+			if (!modalConteiner.is(e.target) && modalConteiner.has(e.target).length === 0 && !$(e.target).is('input[type="text"], input[type="password"]')){
 				// little hack for participate modal
 				if ($(e.target).closest(".modal-content").length == 1) {
 					return false;
@@ -279,7 +279,6 @@
 				aspectRatio: '3:3',
 				handles: true,
 				onInit: function(img, selection){
-					
 					var square_sizes = 270;
 					var naturalImageHeight = $("#cropBox img.crop_image").css('max-height', 'none').css('max-width', 'none').height();
 					$("#cropBox img.crop_image").css('max-height', '565px').css('max-width', '610px');
@@ -342,7 +341,8 @@
 							url: "index.php?crop=true",
 							type: "post",
 							data: postData,
-							success: function(response){						
+							success: function(response){
+								$("body").removeClass("noselect");
 								$("#cropBox").hide();
 								$("#participate-share").show();
 								$("#participate-share .cropped_member_image img").attr("src", response);
@@ -362,11 +362,14 @@ $("#participate-member-start").submit(function() {
 			type: "post",
 			data: $("#participate-member-start").serialize(),
 			success: function(response){
+				$("body").addClass("noselect");
 				console.log($.parseJSON(response));
 				var oMember = $.parseJSON(response);
 				console.log(oMember);
-				$("#pol-grid").prepend( '<div class="box"><div class="boxInner"><div class="imgWrapper"><img src="'+oMember.image+'" /></div><div class="titleBox"><div class="memberName"><a href="'+oMember.permalink+'">'+oMember.first_name+' '+oMember.last_name+'</a></div><div class="statistic"><div class="post post_full"><div class="post_control like unlike" title="Like"></div><span></span></div><div class="place"><span>67 место</span></div></div></div></div></div>' );
+				$("#pol-grid").prepend( '<div class="box"><div class="boxInner"><div class="imgWrapper"><img src="'+oMember.image+'" /></div><div class="titleBox"><div class="memberName"><a href="'+oMember.permalink+'">'+oMember.first_name+' '+oMember.last_name+'</a></div><div class="statistic"><div class="post post_full"><div class="post_control like unlike" title="Like"></div><span>10</span></div><div class="place"><span>67 место</span></div></div></div></div></div>' );
 				customModal(false, '#participate-modal');
+				$("#participate-but").remove();
+				$("#participate-modal").remove();
 			}
 		});
 		return false;

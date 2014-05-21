@@ -23,7 +23,7 @@
 			<?php endif; ?>
 			
 			<?php if ($user_info): ?>
-			<a href="?authorization=exit"><?php echo esc_html($user_info['name']); ?><img class="net_avatar" src="<?php echo esc_url($user_info['network_avatar']); ?>" ></a>
+			<a href="?authorization=exit"><?php echo esc_html($user_info['first_name']." ".$user_info['last_name']); ?><img class="net_avatar" src="<?php echo esc_url($user_info['network_avatar']); ?>" ></a>
 			<?php endif; ?>
 		</div>
 		<div class="clearfix"></div>
@@ -37,7 +37,7 @@
 			<button type="button" class="btn btn-default">По дате</button>
 			<button type="button" class="btn btn-default">По популярности</button>
 			<?php if ($user_info && !isset($user_info['part_id'])): ?>
-			<a class="modal-switch" href="#participate-modal"><button type="button" class="btn btn-default">Участвовать</button></a>
+			<a class="modal-switch" id="participate-but" href="#participate-modal"><button type="button" class="btn btn-default">Участвовать</button></a>
 			<?php endif; ?>
 		</div>
 		<div class="clearfix"></div>
@@ -226,7 +226,7 @@
 						<div class="form-field">
 							<fieldset class="user_name">
 								<label for="user_name">Имя</label>
-								<input name="member[first_name]" placeholder="Ирина" value="Ирина" size="30" type="text">
+								<input name="member[first_name]" placeholder="<?php echo esc_html($user_info['first_name']); ?>" value="<?php echo esc_html($user_info['first_name']); ?>" size="30" type="text">
 							</fieldset>
 							<p class="message">Имя которое будет отображаться на Вашей карточке</p>
 						</div>
@@ -234,7 +234,7 @@
 						<div class="form-field">
 							<fieldset class="user_name">
 								<label for="user_name">Фамилия</label>
-								<input name="member[last_name]" placeholder="Волгодончанская" value="Волгодончанская" size="30" type="text">
+								<input name="member[last_name]" placeholder="<?php echo esc_html($user_info['last_name']); ?>" value="<?php echo esc_html($user_info['last_name']); ?>" size="30" type="text">
 							</fieldset>
 							<p class="message">Фамилия которая будет отображаться на Вашей карточке</p>
 						</div>
@@ -242,7 +242,7 @@
 						<div class="form-field">
 							<fieldset class="user_name">
 								<label for="user_name">Ссылка</label>
-								<input name="member[permalink]" placeholder="IrinaVoldonchanskaya" value="IrinaVoldonchanskaya" size="30" type="text">
+								<input name="member[permalink]" placeholder="<?php echo esc_html($user_info['slug']); ?>" value="<?php echo esc_html($user_info['slug']); ?>" size="30" type="text">
 								<input type="hidden" id="member_image" name="member[image]" value="">
 							</fieldset>
 							<p class="message">Ссылка на Вашу персональный профиль</p>

@@ -36,7 +36,7 @@ class City_Like_Project
 		// default values for user_name and avatars. Only if user_info is defined
 		if ($user_info) {
 			(isset($instance['articles'])) ? $instance['articles'] : array();
-			$user_info['name'] = (empty($user_info['first_name'])) ? $user_info['user_name'] : $user_info['first_name'].' '.$user_info['last_name'];
+			$user_info['slug'] = $this->translit($user_info['first_name']).$this->translit($user_info['last_name']);
 			$user_info['network_avatar'] = (empty($user_info['network_avatar'])) ? 'assets/images/default_avatar.png' : $user_info['network_avatar'];
 		}
 
@@ -459,6 +459,29 @@ class City_Like_Project
         $str = mysql_real_escape_string($str);
 		$str = strtolower($str);
         return $str;
+	}
+	
+	public function translit($str){
+		$tr = array(
+			"А"=>"A","Б"=>"B","В"=>"V","Г"=>"G",
+			"Д"=>"D","Е"=>"E","Ж"=>"J","З"=>"Z","И"=>"I",
+			"Й"=>"Y","К"=>"K","Л"=>"L","М"=>"M","Н"=>"N",
+			"О"=>"O","П"=>"P","Р"=>"R","С"=>"S","Т"=>"T",
+			"У"=>"U","Ф"=>"F","Х"=>"H","Ц"=>"TS","Ч"=>"CH",
+			"Ш"=>"SH","Щ"=>"SCH","Ъ"=>"","Ы"=>"YI","Ь"=>"",
+			"Э"=>"E","Ю"=>"YU","Я"=>"YA","а"=>"a","б"=>"b",
+			"в"=>"v","г"=>"g","д"=>"d","е"=>"e","ж"=>"j",
+			"з"=>"z","и"=>"i","й"=>"y","к"=>"k","л"=>"l",
+			"м"=>"m","н"=>"n","о"=>"o","п"=>"p","р"=>"r",
+			"с"=>"s","т"=>"t","у"=>"u","ф"=>"f","х"=>"h",
+			"ц"=>"ts","ч"=>"ch","ш"=>"sh","щ"=>"sch","ъ"=>"y",
+			"ы"=>"yi","ь"=>"'","э"=>"e","ю"=>"yu","я"=>"ya",
+			"."=>".","?"=>"?","/"=>"_","\\"=>"_",
+			"*"=>"_",":"=>":","*"=>"_","\""=>"_","<"=>"_",
+			">"=>"_","|"=>"_"
+		);
+		
+		return strtr($str,$tr);
 	}
 }
 
