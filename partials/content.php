@@ -23,7 +23,7 @@
 			<?php endif; ?>
 			
 			<?php if ($user_info): ?>
-			<a href="?authorization=exit"><?php echo esc_html($user_info['first_name']." ".$user_info['last_name']); ?><img class="net_avatar" src="<?php echo esc_url($user_info['network_avatar']); ?>" ></a>
+			<a href="?authorization=exit"><span style="padding-right: 10px;"><?php echo esc_html($user_info['first_name']." ".$user_info['last_name']); ?></span><img class="net_avatar" src="<?php echo esc_url($user_info['network_avatar']); ?>" ></a>
 			<?php endif; ?>
 		</div>
 		<div class="clearfix"></div>

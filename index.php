@@ -346,7 +346,7 @@ class City_Like_Project
 						
 						$user_name = self::sanitizeTextField($user_data['name']);
 						if (empty($user_name) || !isset($user_name) || strlen($user_name) <5) $error_code = 1;
-						$email = self::sanitizeTextField($user_data['email']);
+						$email = self::sanitizeTextField($user_data['email'], true, true);
 						if (empty($email) || !isset($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $error_code = $error_code + 10;
 						$password = self::sanitizeTextField($user_data['password'], false);
 						if (empty($password) || !isset($password) || strlen($password) <5) $error_code = $error_code + 100;
@@ -453,11 +453,11 @@ class City_Like_Project
 		}
 	}
 	
-	static public function sanitizeTextField($str, $trim = true){
+	static public function sanitizeTextField($str, $trim = true, $strLost = false){
 		if ($trim === true) $str = trim($str);
         $str = strip_tags($str);
         $str = mysql_real_escape_string($str);
-		$str = strtolower($str);
+		if ($strLost === true) $str = strtolower($str);
         return $str;
 	}
 	
