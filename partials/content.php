@@ -1,5 +1,12 @@
 <?php require("helpers/escape.php"); ?>
+<script type='text/javascript'>
 
+<?php
+$js_array = json_encode($membersByRate, JSON_UNESCAPED_UNICODE);
+echo "var members_array = ". $js_array . ";\n";
+?>
+
+</script>
 <div id="header" class="group">
 	<div id="header-inner" class="group">
 		<form id="search" action="http://dribbble.com/search">
@@ -31,6 +38,7 @@
 </div>
 
 <div class="wrap">
+
 	<div id="user-interface">
 		<div id="filters">
 			<button type="button" class="btn btn-default">ТОП 5</button>
@@ -44,8 +52,9 @@
 	</div>
 	
 	<div id="pol-grid">
+	
 		<?php foreach ($members as $member) : ?>
-		<div class="box">            
+		<div class="box" data-id="<?php echo $member['id_member']; ?>">            
 			<div class="boxInner">
 				<div class="imgWrapper">
 					<img src="<?php echo esc_url($member['photo']); ?>" />

@@ -31,6 +31,8 @@ class City_Like_Project
 	{
 		$members = $this->getMembers();
 		
+		$membersByRate = $this->getMembersByRate();
+		
 		$user_info = $this->isAuth();
 		
 		// default values for user_name and avatars. Only if user_info is defined
@@ -63,6 +65,31 @@ class City_Like_Project
 		
 		// select users only with participate 1!
 		$sql = mysql_query("SELECT * FROM members ORDER BY RAND()" ,$link);
+		
+		while($row = mysql_fetch_assoc($sql)){
+			 $result[] = $row;
+		}
+		
+		mysql_close($link);
+		
+		return $result;
+	}
+	
+	private function getMembersByRate()
+	{
+		$link = mysql_connect($this->DB_host, $this->DB_username, $this->DB_password);
+		
+		if (!$link) {
+			return false;
+		}
+		
+		mysql_select_db("city_like" ,$link);
+		
+		mysql_query("SET NAMES 'utf8'"); 
+		mysql_query("SET CHARACTER SET 'utf8'"); 
+		
+		// select users only with participate 1!
+		$sql = mysql_query("SELECT * FROM members ORDER BY votes DESC" ,$link);
 		
 		while($row = mysql_fetch_assoc($sql)){
 			 $result[] = $row;

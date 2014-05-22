@@ -1,4 +1,18 @@
 	<script type='text/javascript' src='assets/scripts/main.js'></script>
+	<script>
+	function findById(array, id) {
+		for (var i = 0; i < array.length; i++) {
+			if (array[i].id_member == id) {
+				return i;
+			}
+		}
+	}
+	$( ".box .statistic .place span" ).each(function() {
+		var mem_id = $(this).closest(".box").attr("data-id");
+		var place = findById(members_array, mem_id);
+		$(this).html((place+1) + " место");
+	});
+	</script>
 	<script language="javascript">
 		VK.init({
 		  apiId: 4206762
