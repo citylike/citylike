@@ -281,6 +281,8 @@
 			//$('#cropBox').html('Uploading ... ');
 		},
 		onComplete: function(result) {
+			var original_file = "upload_dir/"+result;
+			console.log(original_file);
 			$('.upload-block').hide();
 			$('#cropBox').show().html('<img class="crop_image" src="upload_dir/'+result+'" /></br><button id="cropSendButton" type="button" class="btn btn-default">Сохранить</button>');
 
@@ -349,6 +351,7 @@
 					};
 					
 					$("body").on("click", "#cropSendButton", function(){
+						console.log(original_file);
 						console.log(postData);
 						ias.cancelSelection();
 						$.ajax({
@@ -361,6 +364,7 @@
 								$("#participate-share").show();
 								$("#participate-share .cropped_member_image img").attr("src", response);
 								$("#participate-share #member_image").val(response);
+								$("#participate-share #member_full_image").val(original_file);
 							}
 						});
 					});
@@ -388,6 +392,46 @@ $("#participate-member-start").submit(function() {
 		});
 		return false;
 	});
+</script>
+<script>
+function showZoom(slide_id) {
+	console.log(slide_id);
+	$(".next-slide, .prev-slide").show();
+	
+	$(".zoom-slider").data("curr_slide", slide_id);
+	$(".zoom-slider img").attr("src", members_array[slide_id].photo_full);
+	
+	if(typeof members_array[slide_id+1] == "undefined") $(".next-slide").hide();
+	if(slide_id - 1 == -1) $(".prev-slide").hide();
+	
+	$("body").addClass("modal-overflow-page");
+	$(".bg-fade").fadeIn(100);
+	$(".zoom-slider").show();
+
+}
+
+function nextSlide() {
+
+	showZoom($(".zoom-slider").data("curr_slide") + 1);
+}
+
+function prevSlide() {
+
+	showZoom($(".zoom-slider").data("curr_slide") - 1);
+}
+
+function closeZoom(){
+	
+}
+
+$("body").on("click", ".imgWrapper", function(){
+	closeZoom();
+	var slide_id = findById(members_array, $(this).closest(".box").attr("data-id"));
+	showZoom( slide_id );
+});
+
+$("body").on("click", ".next-slide", nextSlide);
+$("body").on("click", ".prev-slide", prevSlide);
 </script>
 </body>
 </html>

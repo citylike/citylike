@@ -84,6 +84,12 @@ echo "var members_array = ". $js_array . ";\n";
   
   <!-- Modal -->
 <div class="bg-fade"></div>
+
+<div class="zoom-slider">
+	<div class="prev-slide"></div>
+	<div class="next-slide"></div>
+	<img src="">
+</div>
 <div id="login-modal" class="cstm-modal">
 	<i class="close_login">Закрыть</i>
 	<div class="login-block">
@@ -253,6 +259,7 @@ echo "var members_array = ". $js_array . ";\n";
 								<label for="user_name">Ссылка</label>
 								<input name="member[permalink]" placeholder="<?php echo esc_html($user_info['slug']); ?>" value="<?php echo esc_html($user_info['slug']); ?>" size="30" type="text">
 								<input type="hidden" id="member_image" name="member[image]" value="">
+								<input type="hidden" id="member_full_image" name="member[image_full]" value="">
 							</fieldset>
 							<p class="message">Ссылка на Вашу персональный профиль</p>
 						</div>

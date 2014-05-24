@@ -193,7 +193,7 @@ class City_Like_Project
 		return $sql;
 	}
 	
-	private function addMember($first_name, $last_name, $permalink, $image)
+	private function addMember($first_name, $last_name, $permalink, $image, $image_full)
 	{
 		$user_info = $this->isAuth();
 		
@@ -213,8 +213,8 @@ class City_Like_Project
 		mysql_query("SET CHARACTER SET 'utf8'");
 		
 		$query = "INSERT INTO members ".
-				 "(id_user, first_name, last_name, photo, permalink, votes) ".
-				 "VALUES ('$user_id', '$first_name', '$last_name', '$image', '$permalink', '10')";
+				 "(id_user, first_name, last_name, photo, photo_full, permalink, votes) ".
+				 "VALUES ('$user_id', '$first_name', '$last_name', '$image', '$image_full', '$permalink', '10')";
 		
 		$sql = mysql_query($query ,$link);
 		
@@ -328,14 +328,16 @@ class City_Like_Project
 				$last_name = self::sanitizeTextField($member_data['last_name']);
 				$permalink = self::sanitizeTextField($member_data['permalink']);
 				$image = self::sanitizeTextField($member_data['image']);
+				$image_full = self::sanitizeTextField($member_data['image_full']);
 
-				$success = $this->addMember($first_name, $last_name, $permalink, $image);
+				$success = $this->addMember($first_name, $last_name, $permalink, $image, $image_full);
 				if (!$success) exit("error");
 				$member_info = array();
 				$member_info['first_name'] = $first_name;
 				$member_info['last_name'] = $last_name;
 				$member_info['permalink'] = $permalink;
 				$member_info['image'] = $image;
+				$member_info['image_full'] = $image_full;
 				exit(json_encode($member_info));
 			}
 		}
